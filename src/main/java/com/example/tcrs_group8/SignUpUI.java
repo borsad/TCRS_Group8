@@ -1,15 +1,24 @@
+/**COMMENT !
+ Author: Group 8
+ Name: Asem AL Dwaikat ID: 239386640
+ Name:
+ Name:
+ Name:
+ COSC 3506 Section A
+ Any and all work in this file is our own.
+ !**/
+
+
+
 package com.example.tcrs_group8;
 import javafx.scene.control.Label;
 
 
 
 import javafx.scene.control.PasswordField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
