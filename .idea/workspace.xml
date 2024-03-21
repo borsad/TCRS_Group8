@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Asem Al Dwaikat - signin and signup pages">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/AdminDashboardUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/OfficerDashboardUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/UserDashboardUI.java" afterDir="false" />
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Added the DB Connector dependency to pom.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignInUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignInUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignUpUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignUpUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -42,14 +47,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "asemyousif",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/admin/eclipse-workspace/TCRS_FreshCopy/TCRS_Group8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -58,16 +63,22 @@
       <recent name="C:\Users\admin\eclipse-workspace\TCRS_FreshCopy\TCRS_Group8\src\main\java\com\example\tcrs_group8" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserDashboardUI">
-    <configuration name="AdminDashboardUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AdminDashboardUI" />
+  <component name="RunManager" selected="Application.DBConnector">
+    <configuration name="AdminDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.AdminDashboardUI" />
       <module name="TCRS_Group8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.tcrs_group8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.AdminDashboardUI" />
+    <configuration name="DBConnector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.DBConnector" />
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
@@ -120,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DBConnector" />
         <item itemvalue="Application.UserDashboardUI" />
         <item itemvalue="Application.OfficerDashboardUI" />
         <item itemvalue="Application.SignUpUI" />
         <item itemvalue="Application.AdminDashboardUI" />
-        <item itemvalue="Application.AdminDashboardUI (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710867082628</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added the DB Connector dependency to pom.xml">
+      <option name="closed" value="true" />
+      <created>1710980738676</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710980738676</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +174,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Asem Al Dwaikat - signin and signup pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Asem Al Dwaikat - signin and signup pages" />
+    <MESSAGE value="Added the DB Connector dependency to pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the DB Connector dependency to pom.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
