@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Added the DB Connector dependency to pom.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/DBConnector.java" afterDir="false" />
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Services/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Services/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignInUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignInUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignUpUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignUpUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,16 +50,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AdminDashboardUI.executor": "Run",
+    "Application.DBConnector.executor": "Run",
+    "Application.OfficerDashboardUI.executor": "Run",
+    "Application.SignInUI.executor": "Run",
+    "Application.SignUpUI.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "geethmaka",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/eclipse-workspace/TCRS_FreshCopy/TCRS_Group8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
@@ -63,13 +76,13 @@
       <recent name="C:\Users\admin\eclipse-workspace\TCRS_FreshCopy\TCRS_Group8\src\main\java\com\example\tcrs_group8" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DBConnector">
+  <component name="RunManager">
     <configuration name="AdminDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.AdminDashboardUI" />
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.Services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,11 +91,11 @@
       </method>
     </configuration>
     <configuration name="DBConnector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.DBConnector" />
+      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.Services.DBConnector" />
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.Services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,7 +108,7 @@
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.Services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,7 +121,7 @@
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.Services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,7 +134,7 @@
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.Services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,13 +144,20 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AdminDashboardUI" />
         <item itemvalue="Application.DBConnector" />
         <item itemvalue="Application.UserDashboardUI" />
         <item itemvalue="Application.OfficerDashboardUI" />
         <item itemvalue="Application.SignUpUI" />
-        <item itemvalue="Application.AdminDashboardUI" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,6 +191,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:org.openjfx:javafx-base" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Asem Al Dwaikat - signin and signup pages" />
@@ -182,7 +206,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignUpUI.java</url>
-          <line>31</line>
+          <line>35</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

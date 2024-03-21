@@ -11,6 +11,8 @@
 
 package com.example.tcrs_group8;
 
+import com.example.tcrs_group8.Services.DBConnector;
+import com.example.tcrs_group8.Services.Utils;
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -20,6 +22,10 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class SignInUI extends Application {
 
@@ -56,6 +62,23 @@ public class SignInUI extends Application {
         // sign in button
         Button signInButton = new Button("Sign In");
         signInButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;"); // Styling to match the image
+        signInButton.setOnAction(actionEvent -> {
+            try {
+                Utils res = new Utils();
+                ResultSet rs=res.getData("LoginCredentials");
+                while (rs.next()) {
+                    if(emailTextField.getText().equals(rs.getString(2))&&(passwordField.getText().equals(rs.getString(3)))){
+                        System.out.println("Login Success");
+                        break;
+                    }else{
+                        System.out.println("Failed");
+                    }
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
 
         // forgot password link
         Hyperlink forgotPasswordLink = new Hyperlink("Forgot Password?");
