@@ -1,19 +1,21 @@
-/**COMMENT !
- Author: Group 8
- Name: Asem AL Dwaikat ID: 239386640
- Name:
- Name:
- Name:
- COSC 3506 Section A
- Any and all work in this file is our own.
- !**/
-
+/**
+ * COMMENT !
+ * Author: Group 8
+ * Name: Asem AL Dwaikat ID: 239386640
+ * Name:
+ * Name:
+ * Name:
+ * COSC 3506 Section A
+ * Any and all work in this file is our own.
+ * !
+ **/
 
 
 package com.example.tcrs_group8;
-import com.example.tcrs_group8.Services.DBConnector;
-import javafx.scene.control.Label;
 
+import com.example.tcrs_group8.Services.DBConnector;
+import com.example.tcrs_group8.Services.Utils;
+import javafx.scene.control.Label;
 
 
 import javafx.scene.control.PasswordField;
@@ -56,7 +58,6 @@ public class SignUpUI extends Application {
         form.setPadding(new Insets(25, 25, 25, 25)); // Padding to match the image
 
 
-
         //add components to the form
         Label emailLabel = new Label("Email");
         TextField emailTextField = new TextField();
@@ -95,24 +96,31 @@ public class SignUpUI extends Application {
 
         Button Test = new Button("Test");
         signUpButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;");
-        Test.setOnAction(actionEvent->{
-            try{
-                System.out.println("ss");
-                DBConnector con = new DBConnector();
-                Statement stmt = con.getConnection().createStatement();
-                String query = "insert into UserDetails values (null,'test','test',5,5)";
-                int result= stmt.executeUpdate(query);
-                if (result>0){
-                    System.out.println("success");
-                }else{
-                    System.out.println("ddd");
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+        Test.setOnAction(actionEvent -> {
+//            try{
+//                System.out.println("ss");
+//                DBConnector con = new DBConnector();
+//                Statement stmt = con.getConnection().createStatement();
+//                String query = "insert into UserDetails values (null,'test','test',5,5)";
+//                int result= stmt.executeUpdate(query);
+//                if (result>0){
+//                    System.out.println("success");
+//                }else{
+//                    System.out.println("ddd");
+//                }
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+            Utils n = new Utils();
+//            int result = n.insert("UserDetails", "null,'test1','test',999,5");
+            int result=n.delete("UserDetails","UniqueCode='test'");
+            if (result > 0) {
+                System.out.println("success");
+            } else {
+                System.out.println("Error!");
             }
 
         });
-
 
 
         Hyperlink signInPromptButton = new Hyperlink("Already have an account? Sign In");
@@ -125,8 +133,6 @@ public class SignUpUI extends Application {
             System.out.println("Navigating to the sign-in page...");
             // Actual navigation or showing a sign-in form should go here.
         });
-
-
 
 
         // Add components to the form layout
@@ -164,6 +170,7 @@ public class SignUpUI extends Application {
         primStage.setScene(scene);
         primStage.show();
     }
+
     public static void main(String[] args) {
         launch(args);
     }

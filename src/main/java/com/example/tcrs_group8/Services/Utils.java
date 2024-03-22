@@ -7,9 +7,18 @@ import java.sql.Statement;
 public class Utils {
 
     DBConnector con = new DBConnector();
-    private String query;
-    public void insert(){
 
+    private String query;
+    public int insert(String tableName,String values){
+        try{
+            Statement stmt = con.getConnection().createStatement();
+            String query = "insert into "+ tableName +" values ("+values+")";
+            int result= stmt.executeUpdate(query);
+            return result;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
     }
 
     public ResultSet getData(String tableName){
@@ -18,6 +27,29 @@ public class Utils {
             query = "select * from " + tableName;
             return stmt.executeQuery(query);
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public int update(String tableName,String set, String where){
+
+        try{
+            Statement stmt = con.getConnection().createStatement();
+            query= "UPDATE " + tableName+
+                    " SET "+set+ " WHERE "+ where;
+            return stmt.executeUpdate(query);
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public int delete(String tableName,String condition){
+
+        try{
+            Statement stmt = con.getConnection().createStatement();
+            query= "DELETE FROM "+tableName+" WHERE "+condition;
+            return stmt.executeUpdate(query);
+        }catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
