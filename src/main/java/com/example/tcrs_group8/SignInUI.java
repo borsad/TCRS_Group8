@@ -71,7 +71,10 @@ public class SignInUI extends Application {
                         System.out.println("Login Success");
                         break;
                     }else{
-                        System.out.println("Failed");
+                        Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+                        helpAlert.setHeaderText("Incorrect Credentials");
+                        helpAlert.setContentText("Username and password is not correct!");
+                        helpAlert.showAndWait();
                     }
                 }
             } catch (SQLException e) {
