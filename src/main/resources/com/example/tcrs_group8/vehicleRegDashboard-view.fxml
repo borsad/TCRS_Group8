@@ -15,7 +15,7 @@
     <!-- Left Side -->
     <VBox fx:id="leftSide" layoutY="65.0" prefHeight="517.0" prefWidth="149.0" spacing="10.0" style="-fx-background-color: #EFEFEF;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0">
         <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by License #" />
-        <Button fx:id="searchButton" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
+        <Button fx:id="searchButton" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
     </VBox>
 
     <!-- Right Side -->
@@ -67,7 +67,7 @@
             <TextField text="Today's date" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Label text="VIN Number:" GridPane.rowIndex="4" />
             <TextField text="Enter VIN Number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-         <Button fx:id="enrollButton1" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         <Button fx:id="searchButton1" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <columnConstraints>
                 <ColumnConstraints />
                 <ColumnConstraints />
@@ -87,7 +87,7 @@
         </GridPane>
       <VBox alignment="CENTER" prefHeight="35.0" prefWidth="446.0">
          <children>
-            <Button fx:id="searchButton" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Submit" />
+            <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Submit" />
          </children>
       </VBox>
     </VBox>

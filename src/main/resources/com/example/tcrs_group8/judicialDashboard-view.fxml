@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.JudicialDashboardController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.JudicialDashboardController">
     <!-- Top Menu -->
     <HBox alignment="TOP_RIGHT" spacing="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <Button fx:id="helpButton" text="Help" />
@@ -15,13 +23,13 @@
     <!-- Left Side -->
     <VBox fx:id="leftSide" layoutY="48.0" prefHeight="535.0" prefWidth="149.0" spacing="10.0" style="-fx-background-color: #EFEFEF;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="48.0">
         <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by Case #" />
-        <Button fx:id="enrollButton" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Fine Driver" />
-      <Button fx:id="enrollButton1" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Assign Training" />
-      <Button fx:id="enrollButton11" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Dismiss Charge" />
+        <Button fx:id="enrollButton" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Fine Driver" />
+      <Button fx:id="enrollButton1" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Assign Training" />
+      <Button fx:id="enrollButton11" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Dismiss Charge" />
     </VBox>
 
     <!-- Right Side -->
-    <VBox fx:id="rightSide" layoutX="174.0" layoutY="33.0" prefHeight="535.0" prefWidth="612.0" spacing="10.0" style="-fx-background-color: off white;" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="33.0">
+    <VBox fx:id="rightSide" layoutX="174.0" layoutY="33.0" prefHeight="535.0" prefWidth="612.0" spacing="10.0" style="-fx-background-color: #b0b0b0;" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="33.0">
         <Separator prefHeight="14.0" prefWidth="612.0" />
         <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="612.0" text="Driver Details">
             <font>
