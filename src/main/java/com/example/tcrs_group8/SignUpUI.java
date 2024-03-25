@@ -36,7 +36,6 @@ import java.sql.Statement;
 
 
 public class SignUpUI extends Application {
-
     @Override
     public void start(Stage primStage) {
         //set up main layout
@@ -160,8 +159,6 @@ public class SignUpUI extends Application {
 
         // Event handler for the sign-up button
         signUpButton.setOnAction(event -> {
-            // TODO: Add validation logic here
-            // TODO: Add database interaction logic here
         });
 
         // Set the scene and stage
