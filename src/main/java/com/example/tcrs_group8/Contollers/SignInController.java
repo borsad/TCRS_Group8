@@ -135,10 +135,26 @@ public class SignInController {
         sceneController.switchToSignUpPage(actionEvent);
     }
 @FXML
-    public void signIn(ActionEvent actionEvent) {
+    public void signIn(ActionEvent actionEvent) throws IOException {
 
    List<String> logInResult= logIn();
-   if(logInResult.get(0).equalsIgnoreCase("sucess")){
+   if(logInResult.get(0).equalsIgnoreCase("success")){
+       switch (logInResult.get(1)){
+           case "1":
+               sceneController.switchToUserDashboard(actionEvent);
+               break;
+           case "2":
+               sceneController.switchToOfficerDashboard(actionEvent);
+               break;
+           case "3":
+               sceneController.switchToJudicialDashboard(actionEvent);
+               break;
+           case "4":
+               sceneController.switchToTrafficSchoolDashboard(actionEvent);
+               break;
+           case "5":
+               sceneController.switchToAdminDashboard(actionEvent);
+       }
        //add redirection logic based on roles here
    }
 
@@ -173,16 +189,13 @@ public class SignInController {
                     returnList.add(status);
                     returnList.add(roleId);
                 } else {
-                    System.out.println(resultSet.getString(4));
                     String userId= resultSet.getString(4);
                     String query="SELECT * FROM UserDetails Where UserId = ?";
                    PreparedStatement statement=DBConnector.getConnection().prepareStatement(query);
                    statement.setString(1,userId);
                     ResultSet rSet=statement.executeQuery();
-                    System.out.println(rSet);
                     rSet.next();
                     roleId =rSet.getString(5);
-                    System.out.println(roleId+"+++++");
                     setLblError(Color.GREEN, "Login Successful..Redirecting..");
                     returnList.add(status);
                     returnList.add(roleId);

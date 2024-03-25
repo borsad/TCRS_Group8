@@ -7,8 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Minor change">
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Changed the login method to provide the role ID as well">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SignInController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,9 +149,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="Application.JudicialDashboardUI" />
-        <item itemvalue="Application.AdminDashboardUI" />
         <item itemvalue="Application.UserDashboardUI" />
+        <item itemvalue="Application.AdminDashboardUI" />
+        <item itemvalue="Application.JudicialDashboardUI" />
         <item itemvalue="Application.TrafficDashboardUI" />
       </list>
     </recent_temporary>
@@ -260,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711397368981</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changed the login method to provide the role ID as well">
+      <option name="closed" value="true" />
+      <created>1711399156441</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711399156441</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,17 +291,7 @@
     <MESSAGE value="Worked on SignIn and SignUp views and Controllers" />
     <MESSAGE value="Made change to the login validation that was failing" />
     <MESSAGE value="Minor change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor change" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/UserDashboardUI.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Changed the login method to provide the role ID as well" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the login method to provide the role ID as well" />
   </component>
 </project>
