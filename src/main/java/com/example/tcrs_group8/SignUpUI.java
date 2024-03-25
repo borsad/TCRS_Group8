@@ -1,18 +1,21 @@
-/**COMMENT !
- Author: Group 8
- Name: Asem AL Dwaikat ID: 239386640
- Name:
- Name:
- Name:
- COSC 3506 Section A
- Any and all work in this file is our own.
- !**/
-
+/**
+ * COMMENT !
+ * Author: Group 8
+ * Name: Asem AL Dwaikat ID: 239386640
+ * Name:
+ * Name:
+ * Name:
+ * COSC 3506 Section A
+ * Any and all work in this file is our own.
+ * !
+ **/
 
 
 package com.example.tcrs_group8;
-import javafx.scene.control.Label;
 
+import com.example.tcrs_group8.Services.DBConnector;
+import com.example.tcrs_group8.Services.Utils;
+import javafx.scene.control.Label;
 
 
 import javafx.scene.control.PasswordField;
@@ -27,6 +30,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 import javafx.stage.Stage;
+
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class SignUpUI extends Application {
@@ -50,7 +56,6 @@ public class SignUpUI extends Application {
         form.setVgap(10);
         form.setAlignment(Pos.CENTER);
         form.setPadding(new Insets(25, 25, 25, 25)); // Padding to match the image
-
 
 
         //add components to the form
@@ -85,9 +90,37 @@ public class SignUpUI extends Application {
         });
 
         Button signUpButton = new Button("Sign Up");
-        signUpButton.setDefaultButton(true);
+//        signUpButton.setDefaultButton(true);
         signUpButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;");
 
+
+        Button Test = new Button("Test");
+        signUpButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;");
+        Test.setOnAction(actionEvent -> {
+//            try{
+//                System.out.println("ss");
+//                DBConnector con = new DBConnector();
+//                Statement stmt = con.getConnection().createStatement();
+//                String query = "insert into UserDetails values (null,'test','test',5,5)";
+//                int result= stmt.executeUpdate(query);
+//                if (result>0){
+//                    System.out.println("success");
+//                }else{
+//                    System.out.println("ddd");
+//                }
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+            Utils n = new Utils();
+//            int result = n.insert("UserDetails", "null,'test1','test',999,5");
+            int result=n.delete("UserDetails","UniqueCode='test'");
+            if (result > 0) {
+                System.out.println("success");
+            } else {
+                System.out.println("Error!");
+            }
+
+        });
 
 
         Hyperlink signInPromptButton = new Hyperlink("Already have an account? Sign In");
@@ -102,8 +135,6 @@ public class SignUpUI extends Application {
         });
 
 
-
-
         // Add components to the form layout
         form.add(emailLabel, 0, 1);
         form.add(emailTextField, 1, 1);
@@ -116,6 +147,7 @@ public class SignUpUI extends Application {
         form.add(helpButton, 2, 4); // Add help button beside the unique code field at Row 4, Column 2
 
         form.add(signUpButton, 1, 5);
+        form.add(Test, 1, 7);
         HBox signInBox = new HBox();
         signInBox.setAlignment(Pos.CENTER);
         signInBox.getChildren().add(signInPromptButton);
@@ -138,6 +170,7 @@ public class SignUpUI extends Application {
         primStage.setScene(scene);
         primStage.show();
     }
+
     public static void main(String[] args) {
         launch(args);
     }
