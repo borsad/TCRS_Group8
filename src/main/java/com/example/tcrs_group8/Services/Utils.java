@@ -11,7 +11,7 @@ public class Utils {
     private String query;
     public int insert(String tableName,String values){
         try{
-            Statement stmt = con.getConnection().createStatement();
+            Statement stmt = DBConnector.getConnection().createStatement();
             String query = "insert into "+ tableName +" values ("+values+")";
             int result= stmt.executeUpdate(query);
             return result;
@@ -34,7 +34,7 @@ public class Utils {
     public int update(String tableName,String set, String where){
 
         try{
-            Statement stmt = con.getConnection().createStatement();
+            Statement stmt = DBConnector.getConnection().createStatement();
             query= "UPDATE " + tableName+
                     " SET "+set+ " WHERE "+ where;
             return stmt.executeUpdate(query);
@@ -46,7 +46,7 @@ public class Utils {
     public int delete(String tableName,String condition){
 
         try{
-            Statement stmt = con.getConnection().createStatement();
+            Statement stmt = DBConnector.getConnection().createStatement();
             query= "DELETE FROM "+tableName+" WHERE "+condition;
             return stmt.executeUpdate(query);
         }catch (SQLException e) {
