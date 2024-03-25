@@ -7,8 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Worked on SignIn and SignUp views and Controllers">
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Made change to the login validation that was failing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/signin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/signin-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/vehicleRegDashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/vehicleRegDashboard-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,6 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711341425477</updated>
     </task>
+    <task id="LOCAL-00009" summary="Made change to the login validation that was failing">
+      <option name="closed" value="true" />
+      <created>1711345582407</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711345582407</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <task id="LOCAL-00009" summary="Worked on SignIn and SignUp views and Controllers">
       <option name="closed" value="true" />
       <created>1711374811045</created>
@@ -265,7 +276,8 @@
     <MESSAGE value="Added view files, also added a scenecontroller to switch scenes" />
     <MESSAGE value="Asem Al Dwaikat - 5 pages 6 files" />
     <MESSAGE value="Worked on SignIn and SignUp views and Controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on SignIn and SignUp views and Controllers" />
+    <MESSAGE value="Made change to the login validation that was failing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made change to the login validation that was failing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -24,7 +24,7 @@ public class SignInController {
     public Stage stage =new Stage();
     SceneController sceneController =new SceneController();
     @FXML
-    TextField passwordInput;
+    PasswordField passwordInput;
     @FXML
     TextField usernameField;
     @FXML
@@ -165,6 +165,14 @@ public class SignInController {
                     setLblError(Color.TOMATO, "Enter Correct Email/Password");
                     status = "Error";
                 } else {
+                    System.out.println(resultSet.getString(4));
+                    String userId= resultSet.getString(4);
+                    String query="SELECT * FROM UserDetails Where UserId = ";
+                    preparedStatement=DBConnector.getConnection().prepareStatement(sql);
+                    preparedStatement.setString(1,userId);
+                    resultSet=preparedStatement.executeQuery();
+                    String roleId =resultSet.getString(5);
+                    System.out.println(roleId+"+++++");
                     setLblError(Color.GREEN, "Login Successful..Redirecting..");
                 }
             } catch (SQLException ex) {
