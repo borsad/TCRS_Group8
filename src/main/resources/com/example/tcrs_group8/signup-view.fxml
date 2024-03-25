@@ -26,7 +26,7 @@
    <Label layoutX="285.0" layoutY="203.0" text="Unique Code" />
    <Button style="-fx-background-color: #0000FF; -fx-text-fill: white;" layoutX="285.0" layoutY="275.0" mnemonicParsing="false" text="Sign Up" textAlignment="CENTER" />
    <Hyperlink  fx:id="signInLink" onAction="#switchToSignIn" layoutX="285.0" layoutY="236.0" text="Already have an account? Sign In" />
-   
+
 
 
 </AnchorPane>

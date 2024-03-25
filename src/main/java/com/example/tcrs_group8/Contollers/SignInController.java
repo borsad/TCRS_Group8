@@ -1,5 +1,6 @@
 package com.example.tcrs_group8.Contollers;
 
+import com.example.tcrs_group8.Services.DBConnector;
 import com.example.tcrs_group8.Services.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +16,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -25,6 +27,8 @@ public class SignInController {
     TextField passwordInput;
     @FXML
     TextField usernameField;
+    @FXML
+    private Label lblErrors;
     @FXML
     public void initialize(){
 //
@@ -130,24 +134,45 @@ public class SignInController {
     }
 @FXML
     public void signIn(ActionEvent actionEvent) {
-    String passwordDigit = passwordInput.getText().toString();
-    String usernameDigit = usernameField.getText().toString();
-    try {
-                Utils res = new Utils();
-                ResultSet rs=res.getData("LoginCredentials");
-                while (rs.next()) {
-                    if(passwordDigit.equals(rs.getString(2))&&(usernameDigit.equals(rs.getString(3)))){
-                        System.out.println("Login Success");
-                        break;
-                    }else{
-                        Alert helpAlert = new Alert(Alert.AlertType.ERROR);
-                        helpAlert.setHeaderText("Incorrect Credentials");
-                        helpAlert.setContentText("Username and password is not correct!");
-                        helpAlert.showAndWait();
-                    }
+
+   String logInResult= logIn();
+   if(logInResult.equalsIgnoreCase("sucess")){
+       //add redirection logic based on roles here
+   }
+
+    }
+    @FXML
+    private void setLblError(Color color, String text) {
+        lblErrors.setTextFill(color);
+        lblErrors.setText(text);
+        System.out.println(text);
+    }
+    private String logIn() {
+        String status = "Success";
+        String username = usernameField.getText();
+        String password = passwordInput.getText();
+        if(username.isEmpty() || password.isEmpty()) {
+            setLblError(Color.TOMATO, "Empty credentials");
+            status = "Error";
+        } else {
+            String sql = "SELECT * FROM LoginCredentials Where username = ? and password = ?";
+            try {
+               PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+                preparedStatement.setString(1, username);
+                preparedStatement.setString(2, password);
+               ResultSet resultSet = preparedStatement.executeQuery();
+                if (!resultSet.next()) {
+                    setLblError(Color.TOMATO, "Enter Correct Email/Password");
+                    status = "Error";
+                } else {
+                    setLblError(Color.GREEN, "Login Successful..Redirecting..");
                 }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+            } catch (SQLException ex) {
+                System.err.println(ex.getMessage());
+                status = "Exception";
             }
+        }
+
+        return status;
     }
 }
