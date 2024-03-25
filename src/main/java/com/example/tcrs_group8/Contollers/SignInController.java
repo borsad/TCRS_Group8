@@ -19,6 +19,8 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SignInController {
     public Stage stage =new Stage();
@@ -135,8 +137,8 @@ public class SignInController {
 @FXML
     public void signIn(ActionEvent actionEvent) {
 
-   String logInResult= logIn();
-   if(logInResult.equalsIgnoreCase("sucess")){
+   List<String> logInResult= logIn();
+   if(logInResult.get(0).equalsIgnoreCase("sucess")){
        //add redirection logic based on roles here
    }
 
@@ -147,13 +149,17 @@ public class SignInController {
         lblErrors.setText(text);
         System.out.println(text);
     }
-    private String logIn() {
+    private List<String> logIn() {
+        String roleId=null;
         String status = "Success";
+        List<String> returnList=new ArrayList<>();
         String username = usernameField.getText();
         String password = passwordInput.getText();
         if(username.isEmpty() || password.isEmpty()) {
             setLblError(Color.TOMATO, "Empty credentials");
             status = "Error";
+            returnList.add(status);
+            returnList.add(roleId);
         } else {
             String sql = "SELECT * FROM LoginCredentials Where username = ? and password = ?";
             try {
@@ -164,23 +170,29 @@ public class SignInController {
                 if (!resultSet.next()) {
                     setLblError(Color.TOMATO, "Enter Correct Email/Password");
                     status = "Error";
+                    returnList.add(status);
+                    returnList.add(roleId);
                 } else {
                     System.out.println(resultSet.getString(4));
                     String userId= resultSet.getString(4);
-                    String query="SELECT * FROM UserDetails Where UserId = ";
-                    preparedStatement=DBConnector.getConnection().prepareStatement(sql);
-                    preparedStatement.setString(1,userId);
-                    resultSet=preparedStatement.executeQuery();
-                    String roleId =resultSet.getString(5);
+                    String query="SELECT * FROM UserDetails Where UserId = ?";
+                   PreparedStatement statement=DBConnector.getConnection().prepareStatement(query);
+                   statement.setString(1,userId);
+                    ResultSet rSet=statement.executeQuery();
+                    System.out.println(rSet);
+                    rSet.next();
+                    roleId =rSet.getString(5);
                     System.out.println(roleId+"+++++");
                     setLblError(Color.GREEN, "Login Successful..Redirecting..");
+                    returnList.add(status);
+                    returnList.add(roleId);
                 }
             } catch (SQLException ex) {
                 System.err.println(ex.getMessage());
                 status = "Exception";
+                returnList.add(status);
+                returnList.add(roleId);
             }
         }
-
-        return status;
-    }
+        return returnList;}
 }
