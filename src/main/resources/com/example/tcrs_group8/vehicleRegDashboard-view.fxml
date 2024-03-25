@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.TrafficDashboardController">
+    <!-- Top Menu -->
+    <HBox alignment="TOP_RIGHT" spacing="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <Button fx:id="helpButton" text="Help" />
+        <Button fx:id="logoutButton" text="Logout" />
+    </HBox>
+
+    <!-- Left Side -->
+    <VBox fx:id="leftSide" layoutY="65.0" prefHeight="517.0" prefWidth="149.0" spacing="10.0" style="-fx-background-color: #EFEFEF;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0">
+        <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by License #" />
+        <Button fx:id="searchButton" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
+    </VBox>
+
+    <!-- Right Side -->
+    <VBox fx:id="rightSide" layoutY="63.0" prefHeight="517.0" prefWidth="612.0" spacing="10.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="63.0">
+      <Separator prefHeight="0.0" prefWidth="612.0" />
+      <Label alignment="TOP_CENTER" prefHeight="0.0" prefWidth="612.0" text="Fill Form to Register New Vehicle">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </opaqueInsets>
+      </Label>
+        <Separator prefHeight="12.0" prefWidth="612.0" />
+        <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="612.0" text="Driver Details">
+            <font>
+                <Font name="Arial Black" size="18.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="10.0" left="10.0" right="10.0" />
+            </opaqueInsets></Label>
+        <GridPane alignment="CENTER" hgap="10" prefHeight="88.0" prefWidth="612.0" vgap="5">
+            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField text="ABC" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="License Number:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField text="4214fs6353317676137" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField text="430, 421" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+        <Separator prefHeight="33.0" prefWidth="612.0" />
+        <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="616.0" text="Case Details">
+            <font>
+                <Font name="Arial Black" size="18.0" />
+            </font>
+        </Label>
+        <GridPane alignment="CENTER" hgap="10" prefHeight="146.0" prefWidth="612.0" vgap="5">
+            <Label text="Make:" GridPane.rowIndex="7" />
+            <TextField text="421" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="Model/Trim:" GridPane.rowIndex="8" />
+            <TextField text="Today's date" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="VIN Number:" GridPane.rowIndex="4" />
+            <TextField text="Enter VIN Number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <Button fx:id="searchButton1" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+      <VBox alignment="CENTER" prefHeight="35.0" prefWidth="446.0">
+         <children>
+            <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Submit" />
+         </children>
+      </VBox>
+    </VBox>
+</AnchorPane>
