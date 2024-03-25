@@ -7,10 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Changed the login method to provide the role ID as well">
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Completed work on sign in functionality, redirection based on roles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/signin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/signin-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711399156441</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Completed work on sign in functionality, redirection based on roles">
+      <option name="closed" value="true" />
+      <created>1711404274645</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711404274645</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +300,7 @@
     <MESSAGE value="Made change to the login validation that was failing" />
     <MESSAGE value="Minor change" />
     <MESSAGE value="Changed the login method to provide the role ID as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the login method to provide the role ID as well" />
+    <MESSAGE value="Completed work on sign in functionality, redirection based on roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed work on sign in functionality, redirection based on roles" />
   </component>
 </project>

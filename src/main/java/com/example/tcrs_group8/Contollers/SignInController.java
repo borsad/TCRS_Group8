@@ -7,12 +7,15 @@ import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -208,4 +211,14 @@ public class SignInController {
             }
         }
         return returnList;}
+
+    public void forgotPassword(ActionEvent actionEvent) {
+        actionEvent.consume();
+        Alert helpAlert = new Alert(Alert.AlertType.INFORMATION);
+                        helpAlert.setTitle("Forgot Password Information");
+                        helpAlert.setHeaderText("Forgot Password");
+                        helpAlert.setContentText("Please call Ministry Customer Service on 1-800-444-2156 for help with resetting the password");
+                        helpAlert.showAndWait();
+
+    }
 }

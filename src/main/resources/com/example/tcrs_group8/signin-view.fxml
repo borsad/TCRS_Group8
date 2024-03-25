@@ -23,8 +23,8 @@
     <TextField fx:id="usernameField" layoutX="376.0" layoutY="128.0" prefHeight="26.0" prefWidth="200.0" promptText="Enter your Username" />
     <Label layoutX="285.0" layoutY="168.0" text="Password" />
     <PasswordField fx:id="passwordInput" layoutX="376.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" promptText="Enter your password" />
-    <Hyperlink fx:id="signUpLink" layoutX="273.0" layoutY="248.0" onAction="#switchToSignUp" text="Already have an account? Sign In" />
-    <Hyperlink fx:id="forgotPassword" layoutX="273.0" layoutY="272.0" text="Forgot password?" />
+    <Hyperlink fx:id="signUpLink" layoutX="273.0" layoutY="248.0" onAction="#switchToSignUp" text="Don't have an Account? Sign Up" />
+    <Hyperlink onAction="#forgotPassword" fx:id="forgotPassword" layoutX="273.0" layoutY="272.0" text="Forgot password?" />
     <Button fx:id="signInButton" onAction="#signIn" layoutX="281.0" layoutY="211.0" mnemonicParsing="false" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Sign In" textAlignment="CENTER" />
     <Label fx:id="lblErrors" alignment="CENTER" layoutX="281" layoutY="290" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
         <font>
