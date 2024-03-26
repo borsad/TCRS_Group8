@@ -14,4 +14,8 @@ module com.example.tcrs_group8 {
 
     opens com.example.tcrs_group8 to javafx.fxml;
     exports com.example.tcrs_group8;
+    exports com.example.tcrs_group8.Services;
+    opens com.example.tcrs_group8.Services to javafx.fxml;
+    opens com.example.tcrs_group8.Contollers to javafx.fxml;
+    exports com.example.tcrs_group8.Contollers;
 }
