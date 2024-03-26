@@ -7,9 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Worked on SignIn and SignUp views and Controllers">
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="ALl completed UI -  done by Asem AL Dwaikat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/vehicleRegDashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/vehicleRegDashboard-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,10 +70,13 @@
       <recent name="C:\Users\Brahm\IdeaProjects\New folder\TCRS_Group8\src\main\java\com\example\tcrs_group8\Contollers" />
       <recent name="C:\Users\admin\eclipse-workspace\TCRS_FreshCopy\TCRS_Group8\src\main\java\com\example\tcrs_group8" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.tcrs_group8" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.JudicialDashboardUI">
-    <configuration name="AdminDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.AdminDashboardUI" />
+  <component name="RunManager" selected="Application.DashboardUI">
+    <configuration name="DashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.DashboardUI" />
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
@@ -86,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.HelloApplication" />
+    <configuration name="FAQUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.FAQUI" />
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.Contollers.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrafficDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.TrafficDashboardUI" />
+    <configuration name="PayFineUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.PayFineUI" />
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.Contollers.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.UserDashboardUI" />
+    <configuration name="VehicleRegDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.VehicleRegDashboardUI" />
       <module name="TCRS_Group8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.tcrs_group8.Contollers.*" />
+          <option name="PATTERN" value="com.example.tcrs_group8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DashboardUI" />
+        <item itemvalue="Application.FAQUI" />
+        <item itemvalue="Application.PayFineUI" />
+        <item itemvalue="Application.VehicleRegDashboardUI" />
         <item itemvalue="Application.JudicialDashboardUI" />
-        <item itemvalue="Application.AdminDashboardUI" />
-        <item itemvalue="Application.UserDashboardUI" />
-        <item itemvalue="Application.TrafficDashboardUI" />
-        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +247,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711395088025</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Worked on SignIn and SignUp views and Controllers">
+      <option name="closed" value="true" />
+      <created>1711395975332</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711395975332</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ALl completed UI -  done by Asem AL Dwaikat">
+      <option name="closed" value="true" />
+      <created>1711470937952</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711470937952</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +283,8 @@
     <MESSAGE value="Added view files, also added a scenecontroller to switch scenes" />
     <MESSAGE value="Asem Al Dwaikat - 5 pages 6 files" />
     <MESSAGE value="Worked on SignIn and SignUp views and Controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on SignIn and SignUp views and Controllers" />
+    <MESSAGE value="ALl completed UI -  done by Asem AL Dwaikat" />
+    <option name="LAST_COMMIT_MESSAGE" value="ALl completed UI -  done by Asem AL Dwaikat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -279,6 +298,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/UserDashboardUI.java</url>
           <line>21</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/VehicleRegDashboardUI.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
