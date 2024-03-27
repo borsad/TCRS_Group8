@@ -9,6 +9,16 @@
   <component name="ChangeListManager">
     <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="ALl completed UI -  done by Asem AL Dwaikat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/ActiveDirectoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/ActiveDirectoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/FAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/FAQController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/PayFineClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/PayFineClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/TrafficDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/TrafficDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/DashboardUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/DashboardUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/FAQUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/FAQUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/PayFineUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/PayFineUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/VehicleRegDashboardUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/VehicleRegDashboardUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/FAQ-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/FAQ-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/payFineClientSide-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/payFineClientSide-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +84,7 @@
       <recent name="com.example.tcrs_group8" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DashboardUI">
+  <component name="RunManager" selected="Application.FAQUI">
     <configuration name="DashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.DashboardUI" />
       <module name="TCRS_Group8" />
@@ -142,9 +152,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DashboardUI" />
         <item itemvalue="Application.FAQUI" />
         <item itemvalue="Application.PayFineUI" />
+        <item itemvalue="Application.DashboardUI" />
         <item itemvalue="Application.VehicleRegDashboardUI" />
         <item itemvalue="Application.JudicialDashboardUI" />
       </list>
@@ -263,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711470937952</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ALl completed UI -  done by Asem AL Dwaikat">
+      <option name="closed" value="true" />
+      <created>1711549605572</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711549605572</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

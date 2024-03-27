@@ -4,8 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
-import javafx.scene.control.TitledPane;
-import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 
 public class FAQController {

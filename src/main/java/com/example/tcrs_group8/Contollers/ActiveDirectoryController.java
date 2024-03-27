@@ -7,26 +7,9 @@ import javafx.scene.control.TextField;
 
 public class ActiveDirectoryController {
 
-    @FXML
-    private TableView<?> tableView;
 
-    @FXML
-    private TextField searchField;
-
-    @FXML
-    private Button helpButton;
-
-    @FXML
-    private Button logoutButton;
-
-    @FXML
-    private Button updateButton;
-
-    @FXML
-    private Button generateReportButton;
-
-    @FXML
-    private Button deleteButton;
+    public ActiveDirectoryController() {
+    }
 
     // Method for handling the 'Update' button action
     @FXML

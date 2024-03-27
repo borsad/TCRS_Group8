@@ -19,13 +19,7 @@ public class PayFineClientController {
     private TextField amountField;
 
     @FXML
-    private Button payFineButton;
-
-    @FXML
     private TextField nameField11; // You might want to rename this ID to something more descriptive.
-
-    @FXML
-    private Button searchButton;
 
     // This method will be called when the "Pay The Fine" button is clicked
     @FXML
