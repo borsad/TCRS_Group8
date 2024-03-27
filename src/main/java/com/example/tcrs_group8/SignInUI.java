@@ -11,6 +11,7 @@
 
 package com.example.tcrs_group8;
 
+import com.example.tcrs_group8.Contollers.SignInController;
 import com.example.tcrs_group8.Services.DBConnector;
 import com.example.tcrs_group8.Services.Utils;
 import javafx.application.Application;
@@ -23,6 +24,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -63,24 +65,12 @@ public class SignInUI extends Application {
         Button signInButton = new Button("Sign In");
         signInButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;"); // Styling to match the image
         signInButton.setOnAction(actionEvent -> {
+            SignInController s = new SignInController();
             try {
-                Utils res = new Utils();
-                ResultSet rs=res.getData("LoginCredentials");
-                while (rs.next()) {
-                    if(emailTextField.getText().equals(rs.getString(2))&&(passwordField.getText().equals(rs.getString(3)))){
-                        System.out.println("Login Success");
-                        break;
-                    }else{
-                        Alert helpAlert = new Alert(Alert.AlertType.ERROR);
-                        helpAlert.setHeaderText("Incorrect Credentials");
-                        helpAlert.setContentText("Username and password is not correct!");
-                        helpAlert.showAndWait();
-                    }
-                }
-            } catch (SQLException e) {
+                s.signIn(actionEvent);
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         });
 
         // forgot password link
