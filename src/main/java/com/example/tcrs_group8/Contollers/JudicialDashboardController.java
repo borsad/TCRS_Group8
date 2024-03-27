@@ -1,12 +1,23 @@
 package com.example.tcrs_group8.Contollers;
 
+import com.example.tcrs_group8.Services.DBConnector;
+import com.example.tcrs_group8.Services.Utils;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
+import javafx.scene.paint.Color;
+
+import java.awt.desktop.SystemEventListener;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class JudicialDashboardController {
 
+    public Button searchButton;
     @FXML
     private Button helpButton;
 
@@ -24,6 +35,18 @@ public class JudicialDashboardController {
 
     @FXML
     private Button dismissButton;
+
+    @FXML private TextField caseDate;
+    @FXML private TextField offenceNumber;
+    @FXML private TextField officerName;
+    @FXML private TextField officerNotes;
+    @FXML private TextField pastOffence;
+    @FXML private TextField licenseNumber;
+    @FXML private TextField name;
+
+    @FXML private TextField fineField;
+    Utils u = new Utils();
+    String values;
 
     @FXML
     void handleFineButtonAction(ActionEvent event) {
@@ -54,7 +77,87 @@ public class JudicialDashboardController {
         System.out.println("Logout button clicked");
         // Implement your logic here
     }
+    @FXML
+    void handleSearchButtonAction(ActionEvent event) {
+        String sql = "SELECT * FROM Cases Where caseID=1234567890";
+        try {
+            PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+//            preparedStatement.setString(1,searchField.getText());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                caseDate.setText(resultSet.getString("OffenceDate"));
+                offenceNumber.setText(resultSet.getString("OffenceNumber"));
+                officerName.setText(resultSet.getString("OfficerName"));
+                officerNotes.setText(resultSet.getString("OfficerNotes"));
+                pastOffence.setText(resultSet.getString("PastOffences"));
+                sql = "SELECT * FROM UserDetails Where UserId = " + resultSet.getString("UserID");
+                preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+                resultSet = preparedStatement.executeQuery();
+                if(resultSet.next()){
+                    licenseNumber.setText(resultSet.getString(4));
+                    name.setText(resultSet.getString("Name"));
+                }else{
+                    System.out.println("ddd");
+                }
 
+            }else{
+                Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+                helpAlert.setHeaderText("Error");
+                helpAlert.setContentText("No results found for this case number!");
+                helpAlert.showAndWait();
+            }
+        }catch (SQLException ex) {
+                    System.err.println(ex.getMessage());
+                }
+    }
+
+    @FXML
+    void addFine() {
+        values = "null,"+searchField.getText()+",'Fine',"+fineField.getText();
+        int k=u.insert("CaseResults",values);
+        if(k>0){
+            System.out.println("done");
+        }else{
+            System.out.println("F");
+        }
+
+    }
+
+    @FXML
+    public void assignTrafficSchool() {
+        values = "null,"+searchField.getText()+",'Traffic School',null";
+        String sql= "Insert into CaseResults(CaseID,ResultType) values(?,'Traffic School')";
+        try{
+        PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+        preparedStatement.setString(1,searchField.getText());
+
+        int affectedRows = preparedStatement.executeUpdate();
+            if (affectedRows == 0) {
+                throw new SQLException("Creating user failed, no rows affected.");
+            }
+
+            try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    System.out.println(generatedKeys.getString(1));
+                    sql= "Insert into TrafficSchoolEnrollment(resultID,caseId) values(?,?)";
+                    preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+                    preparedStatement.setString(1,generatedKeys.getString(1));
+                    preparedStatement.setString(2,searchField.getText());
+                    affectedRows = preparedStatement.executeUpdate();
+                }
+                else {
+                    throw new SQLException("Creating user failed, no ID obtained.");
+                }
+            }
+        }
+        catch (SQLException e){
+            System.out.println(e);
+        }
+    }
+    @FXML
+    public void dismissCase() {
+        
+    }
     @FXML
     public void initialize() {
         // Initialization code can go here
