@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.DashboardViewController">
+
+        <HBox alignment="TOP_RIGHT" spacing="10" style="-fx-padding: 10;">
+            <Label style="-fx-font-size: 24;" />
+        </HBox>
+
+        <GridPane alignment="CENTER" hgap="10" layoutX="137.0" layoutY="109.0" prefHeight="266.0" prefWidth="552.0" vgap="10">
+            <Button minHeight="70" minWidth="150" prefHeight="70.0" prefWidth="173.0" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-size: 16;" text="Report Management" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button minHeight="70" minWidth="150" prefHeight="70.0" prefWidth="219.0" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-size: 16;" text="Citation Management" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button minHeight="70" minWidth="150" prefHeight="70.0" prefWidth="172.0" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-size: 16;" text="User Management" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button minHeight="70" minWidth="150" prefHeight="70.0" prefWidth="221.0" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-size: 16;" text="Fine Payment Management" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+        </GridPane>
+         <Button layoutX="542.0" layoutY="84.0" prefHeight="25.0" prefWidth="68.0" text="Logout" />
+ 
+</AnchorPane>
