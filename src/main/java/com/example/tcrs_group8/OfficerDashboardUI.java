@@ -63,16 +63,27 @@ public class OfficerDashboardUI extends Application {
 
         // input fields on left side for data
         VBox inputFields = new VBox(10);
-        inputFields.setPadding(new Insets(10));
-        TextField reportIdInput = new TextField();
-        reportIdInput.setPromptText("Report ID");
-        TextField violationInput = new TextField();
-        violationInput.setPromptText("Violations");
-        TextField licenseNumberInput = new TextField();
-        licenseNumberInput.setPromptText("Driving License Number");
-        TextField officerIdInput = new TextField();
-        officerIdInput.setPromptText("Officer ID");
-        inputFields.getChildren().addAll(reportIdInput, violationInput, licenseNumberInput, officerIdInput);
+        TextField caseIDField = new TextField();
+        caseIDField.setPromptText("Case ID");
+
+        TextField userIDField = new TextField();
+        userIDField.setPromptText("User ID");
+
+        TextField officerNameField = new TextField();
+        officerNameField.setPromptText("Officer Name");
+
+        TextArea officerNotesArea = new TextArea();
+        officerNotesArea.setPromptText("Officer Notes");
+
+        DatePicker offenceDatePicker = new DatePicker();
+        offenceDatePicker.setPromptText("Offence Date");
+
+        TextField offenceNumberField = new TextField();
+        offenceNumberField.setPromptText("Offence Number");
+
+        TextField pastOffencesField = new TextField();
+        pastOffencesField.setPromptText("Past Offences");
+        inputFields.getChildren().addAll(caseIDField, userIDField, officerNameField, officerNotesArea, offenceDatePicker, offenceNumberField, pastOffencesField);
 
         // gridpane for button layout
         GridPane buttonsGrid = new GridPane();
@@ -81,20 +92,17 @@ public class OfficerDashboardUI extends Application {
         buttonsGrid.setAlignment(Pos.CENTER_LEFT);
 
         // buttons below the input fields
-        Button addButton = new Button("Add");
         Button updateButton = new Button("Update");
         Button deleteButton = new Button("Delete");
         Button reportButton = new Button("Generate Report");
-        addButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;");
         updateButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;");
         deleteButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;");
         reportButton.setStyle("-fx-background-color: #0000FF; -fx-text-fill: white;");
 
         // add buttons to the gridpane
-        buttonsGrid.add(addButton, 0, 0); // Column 0, Row 0
-        buttonsGrid.add(updateButton, 1, 0); // Column 1, Row 0
-        buttonsGrid.add(deleteButton, 0, 1); // Column 0, Row 1
-        buttonsGrid.add(reportButton, 1, 1); // Column 1, Row 1
+        buttonsGrid.add(updateButton, 0, 0); // Column 1, Row 0
+        buttonsGrid.add(deleteButton, 1, 0); // Column 0, Row 1
+        buttonsGrid.add(reportButton, 2, 0); // Column 1, Row 1
         buttonsGrid.setAlignment(Pos.CENTER_LEFT);
 
         // layout for  side panel containing input fields and buttons
@@ -109,7 +117,6 @@ public class OfficerDashboardUI extends Application {
         mainLayout.setCenter(tableView);
 
         // TODO: add functions here
-        addButton.setOnAction(e -> System.out.println("Add clicked"));
         updateButton.setOnAction(e -> System.out.println("Update clicked"));
         deleteButton.setOnAction(e -> System.out.println("Delete clicked"));
         reportButton.setOnAction(e -> System.out.println("Generate Report clicked"));
