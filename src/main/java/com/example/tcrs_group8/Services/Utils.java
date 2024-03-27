@@ -13,8 +13,7 @@ public class Utils {
         try{
             Statement stmt = DBConnector.getConnection().createStatement();
             String query = "insert into "+ tableName +" values ("+values+")";
-            int result= stmt.executeUpdate(query);
-            return result;
+            return stmt.executeUpdate(query);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -53,5 +52,7 @@ public class Utils {
             throw new RuntimeException(e);
         }
     }
+
+
     public Utils(){}
 }

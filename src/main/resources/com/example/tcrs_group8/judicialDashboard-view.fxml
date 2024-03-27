@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.JudicialDashboardController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.JudicialDashboardController">
     <!-- Top Menu -->
     <HBox alignment="TOP_RIGHT" spacing="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <Button fx:id="helpButton" text="Help" />
@@ -22,10 +14,16 @@
 
     <!-- Left Side -->
     <VBox fx:id="leftSide" layoutY="48.0" prefHeight="535.0" prefWidth="149.0" spacing="10.0" style="-fx-background-color: #EFEFEF;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="48.0">
-        <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by Case #" />
-        <Button fx:id="enrollButton" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Fine Driver" />
-      <Button fx:id="enrollButton1" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Assign Training" />
-      <Button fx:id="enrollButton11" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Dismiss Charge" />
+        <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by Case #" text="1234567890" />
+        <Button fx:id="searchButton" onAction="#handleSearchButtonAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
+
+        <TextField fx:id="fineField" prefHeight="0.0" prefWidth="149.0" promptText="Enter Fine Amount" />
+
+        <Button fx:id="fineButton" onAction="#addFine" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Fine Driver" />
+      <Button fx:id="assignButton" onAction="#assignTrafficSchool" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Assign Training" />
+      <Button fx:id="dismissButton" onAction="#dismissCase" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Dismiss Charge" />
+
+
     </VBox>
 
     <!-- Right Side -->
@@ -40,11 +38,11 @@
             </opaqueInsets></Label>
         <GridPane alignment="CENTER" hgap="10" prefHeight="88.0" prefWidth="612.0" vgap="5">
             <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <TextField text="ABC" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="name" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
             <Label text="License Number:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <TextField text="4214fs6353317676137" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="licenseNumber" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Past Offenses:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <TextField text="430, 421" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="pastOffence" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <columnConstraints>
                 <ColumnConstraints />
                 <ColumnConstraints />
@@ -63,13 +61,13 @@
         </Label>
         <GridPane alignment="CENTER" hgap="10" prefHeight="146.0" prefWidth="612.0" vgap="5">
             <Label text="Officer:" GridPane.rowIndex="7" />
-            <TextField text="Pappu" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="officerName" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <Label text="Officer Note/Evidence:" GridPane.rowIndex="8" />
-            <TextField text="Today's date" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="officerNotes" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <Label text="Offense Number:" GridPane.rowIndex="4" />
-            <TextField text="12345" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="offenceNumber" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          <Label text="Date And Time:" />
-         <TextField text="25-3-2024" GridPane.columnIndex="1" />
+         <TextField fx:id="caseDate" editable="false" GridPane.columnIndex="1" />
             <columnConstraints>
                 <ColumnConstraints />
                 <ColumnConstraints />
