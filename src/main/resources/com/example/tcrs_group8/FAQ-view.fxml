@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.FAQController">
+    <VBox alignment="TOP_CENTER" layoutX="64.0" layoutY="82.0" prefHeight="512.0" prefWidth="673.0" spacing="20">
+        <HBox alignment="TOP_RIGHT" spacing="10" style="-fx-padding: 10;"/>
+        <Label style="-fx-font-size: 36;" text="FAQs">
+            <font>
+                <Font size="36.0"/>
+            </font>
+        </Label>
+        <Accordion fx:id="faqAccordion" prefHeight="305.0" prefWidth="614.0" VBox.vgrow="ALWAYS">
+            <panes>
+                <TitledPane animated="true" expanded="false" text="How to Fine a Driver">
+                    <TextArea text="Answer here" wrapText="true"/>
+                </TitledPane>
+                <TitledPane animated="true" expanded="false" text="How to find the drivers record">
+                    <TextArea text="Answer here" wrapText="true "/>
+                </TitledPane>
+                <TitledPane animated="true" expanded="false" text="How to reset password">
+                        <TextArea text="Answer here" wrapText="true"/>
+                </TitledPane>
+            </panes>
+        </Accordion>
+        <HBox alignment="CENTER" prefWidth="799.0" spacing="5">
+            <Hyperlink text="User Manual" textFill="BLUE"
+                       underline="true"/> <!-- This can be a hyperlink if needed -->
+        </HBox>
+        <Label text="support@ministryoftraffic.com"/>
+        <Label text="+1(123)-456-7890"/>
+        <Label text="123, Fake Street, Toronto, ON M1A 3A1"/>
+    </VBox>
+    <ButtonBar layoutX="557.0" layoutY="31.0" prefHeight="40.0" prefWidth="162.0">
+      <buttons>
+          <Button fx:id="helpButton" text="Help"/>
+          <Button mnemonicParsing="false" text="Logout"/>
+      </buttons>
+    </ButtonBar>
+</AnchorPane>
