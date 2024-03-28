@@ -6,8 +6,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
-public class TrafficDashboardController {
+import java.io.IOException;
 
+public class TrafficDashboardController {
+    SceneController sceneController=new SceneController();
     public VBox rightSide;
     public VBox leftSide;
     @FXML
@@ -56,5 +58,15 @@ public class TrafficDashboardController {
     public void initialize() {
         // Initialization code here, such as configuring components
         System.out.println("Traffic Dashboard UI initialized");
+    }
+@FXML
+    public void onHelpClicked(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToFaqPage(actionEvent);
+        System.out.println("Help clicked");
+    }
+@FXML
+    public void onLogutClick(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
+        System.out.println("Logut clicked");
     }
 }

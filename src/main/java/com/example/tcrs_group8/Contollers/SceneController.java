@@ -69,4 +69,28 @@ private Parent root;
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToFaqPage(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FAQ-view.fxml"));
+     //   Parent root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("FAQ-view.fxml")));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Stage newStage=new Stage();
+        newStage.setTitle("FAQ");
+        newStage.setScene(scene);
+        newStage.show();
+    }
+    public void switchToMakeAPayment(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("payFineClientSide-view.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToVehicleRegistration(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("vehicleRegDashboard-view.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

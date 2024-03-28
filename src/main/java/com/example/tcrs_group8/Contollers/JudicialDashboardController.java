@@ -10,13 +10,14 @@ import javafx.event.ActionEvent;
 import javafx.scene.paint.Color;
 
 import java.awt.desktop.SystemEventListener;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class JudicialDashboardController {
-
+    SceneController sceneController= new SceneController();
     public Button searchButton;
     @FXML
     private Button helpButton;
@@ -162,5 +163,15 @@ public class JudicialDashboardController {
     public void initialize() {
         // Initialization code can go here
         System.out.println("Judicial Dashboard UI initialized");
+    }
+    @FXML
+    public void onHelpClicked(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToFaqPage(actionEvent);
+        System.out.println("Help clicked");
+    }
+    @FXML
+    public void onLogutClick(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
+        System.out.println("Logut clicked");
     }
 }
