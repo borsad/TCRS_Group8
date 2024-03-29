@@ -69,6 +69,13 @@ public class TrafficDashboardController {
                     helpAlert = new Alert(Alert.AlertType.INFORMATION);
                     helpAlert.setHeaderText("Done");
                     helpAlert.setContentText("User Enrolled Successfully !");
+                    enrollButton.setDisable(true);
+                    nameFeild.setText("");
+                    Lnumber.setText("");
+                    notes.setText("");
+                    noOfSessions.setText("");
+                    trainingType.setText("");
+                    searchField.setText("");
                 } else {
                     helpAlert = new Alert(Alert.AlertType.ERROR);
                     helpAlert.setHeaderText("Error");
@@ -110,6 +117,15 @@ public class TrafficDashboardController {
                 Lnumber.setText(resultSet.getString("DriverLicenseNumber"));
                 notes.setText(resultSet.getString("Notes"));
                 enrollButton.setDisable(false);
+                sql = "SELECT * FROM TrafficSchoolEnrollment Where caseID=?";
+                preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+                preparedStatement.setString(1, searchField.getText());
+                resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()) {
+                    noOfSessions.setText(resultSet.getString("NumberOfSessions"));
+                    trainingType.setText(resultSet.getString("TrainingType"));
+                    enrollButton.setText("Update Enrolment");
+                }
             } else {
                 Alert helpAlert = new Alert(Alert.AlertType.ERROR);
                 helpAlert.setHeaderText("Error");
