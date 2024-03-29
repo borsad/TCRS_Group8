@@ -25,7 +25,6 @@
         <TextField fx:id="searchField" prefHeight="19.0" prefWidth="149.0" promptText="Search by License #" />
         <Button fx:id="searchButton" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
         <Button fx:id="enrollButton" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Enroll Driver" />
-        <Button fx:id="enrollButton" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Enroll Driver" />
     </VBox>
 
     <!-- Right Side -->

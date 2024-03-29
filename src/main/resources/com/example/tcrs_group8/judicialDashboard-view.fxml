@@ -14,7 +14,7 @@
 
     <!-- Left Side -->
     <VBox fx:id="leftSide" layoutY="48.0" prefHeight="535.0" prefWidth="149.0" spacing="10.0" style="-fx-background-color: #EFEFEF;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="48.0">
-        <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by Case #" text="1234567890" />
+        <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by Case #" />
         <Button fx:id="searchButton" onAction="#handleSearchButtonAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
 
         <TextField fx:id="fineField" prefHeight="0.0" prefWidth="149.0" promptText="Enter Fine Amount" visible="false" />
