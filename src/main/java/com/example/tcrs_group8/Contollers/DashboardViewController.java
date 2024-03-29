@@ -1,10 +1,14 @@
 package com.example.tcrs_group8.Contollers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class DashboardViewController {
+import java.io.IOException;
 
+public class DashboardViewController {
+    @FXML
+    SceneController sceneController=new SceneController();
     @FXML
     private Button reportManagementButton;
 
@@ -53,5 +57,18 @@ public class DashboardViewController {
     private void handleLogoutAction() {
         System.out.println("Logout button clicked");
 
+    }
+    @FXML
+    public void clickUserManagement(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToUserManagement(actionEvent);
+
+    }
+    @FXML
+    public void clickFineManagement(ActionEvent actionEvent) {
+
+    }
+    @FXML
+    public void onLogutClick(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
     }
 }

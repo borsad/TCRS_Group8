@@ -47,7 +47,7 @@ public class PayFineClientController {
             insertPay.setString(3, UserID);
             int rowsAffected = insertPay.executeUpdate();
             if (rowsAffected > 0) {
-                System.out.println("Record inserted successfully into LoginCredentials.");
+                System.out.println("Record inserted successfully into Pay.");
                 try (ResultSet generatedKeys = insertPay.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
                         DataModel dataModel = new DataModel();
