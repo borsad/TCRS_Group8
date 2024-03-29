@@ -149,7 +149,7 @@ public class JudicialDashboardController {
         int affectedRows = preparedStatement.executeUpdate();
             if (affectedRows == 0) {
                 throw new SQLException("Creating user failed, no rows affected.");
-            }
+            }else{
 
             try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
@@ -159,12 +159,30 @@ public class JudicialDashboardController {
                     preparedStatement.setString(1,generatedKeys.getString(1));
                     preparedStatement.setString(2,searchField.getText());
                     affectedRows = preparedStatement.executeUpdate();
+                    if(affectedRows>0){
+                        Alert helpAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                        helpAlert.setHeaderText("Records Updated");
+                        helpAlert.setContentText("Records Updated");
+                        helpAlert.showAndWait();
+                        fineField.setVisible(false);
+                        dismissButton.setVisible(false);
+                        assignButton.setVisible(false);
+                        fineButton.setVisible(false);
+                        searchField.setText("");
+                        name.setText("");
+                        licenseNumber.setText("");
+                        pastOffence.setText("");
+                        officerNotes.setText("");
+                        offenceNumber.setText("");
+                        caseDate.setText("");
+                        officerName.setText("");
+                    }
                 }
                 else {
                     throw new SQLException("Creating user failed, no ID obtained.");
                 }
             }
-        }
+        }}
         catch (SQLException e){
             System.out.println(e);
         }
