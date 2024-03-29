@@ -77,7 +77,7 @@ public class PayFineClientController {
     // This method will be called when the "Search" button is clicked
     @FXML
     private void handleSearch() {
-        String sql = "SELECT * FROM FineDetails2 Where OffenseNumber=?";
+        String sql = "SELECT * FROM FineDetails2 Where CaseID=?";
         try {
             PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
             preparedStatement.setString(1, nameField11.getText());

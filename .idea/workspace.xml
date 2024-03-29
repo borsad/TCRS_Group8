@@ -7,28 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Pay Fine Success functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/AdminGenericSuccessController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/ChangePasswordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/ChangeUsernameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/adminGenericSuccessPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/changePassword-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/changeusername-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-Mar-24_10_43_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-Mar-24_10_43_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Pay Fine Success page touches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/ActiveDirectoryUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/ActiveDirectoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/UserManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/DashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/DashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/PayFineClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/PayFineClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/JudicialDashboardUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/PayFineUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignInUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SignUpUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/SuccessPageUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/VehicleRegDashboardUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/activeDirectory-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/userManagement-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/dashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/dashboard-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +28,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="master" />
-      </list>
-    </option>
-  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/UserDashboard-view.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -73,6 +46,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.AdminDashboardUI.executor": "Run",
     "Application.DBConnector.executor": "Run",
+    "Application.FAQUI.executor": "Run",
     "Application.JudicialDashboardUI.executor": "Run",
     "Application.OfficerDashboardUI.executor": "Run",
     "Application.PayFineUI.executor": "Run",
@@ -83,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "geethmaka",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/AppData/Local/SceneBuilder/SceneBuilder.exe",
     "node.js.detected.package.eslint": "true",
@@ -102,7 +76,7 @@
       <recent name="C:\Users\admin\eclipse-workspace\TCRS_FreshCopy\TCRS_Group8\src\main\java\com\example\tcrs_group8" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
+  <component name="RunManager">
     <configuration name="AdminDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.AdminDashboardUI" />
       <module name="TCRS_Group8" />
@@ -170,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.AdminDashboardUI" />
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.UserDashboardUI" />
         <item itemvalue="Application.JudicialDashboardUI" />
         <item itemvalue="Application.TrafficDashboardUI" />
@@ -323,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711689088994</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Pay Fine Success page touches">
+      <option name="closed" value="true" />
+      <created>1711691106020</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1711691106021</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +314,17 @@
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
     <option featureType="dependencySupport" implementationName="java:org.openjfx:javafx-base" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
@@ -350,6 +343,7 @@
     <MESSAGE value="Worked on Forgot Password on login page" />
     <MESSAGE value="Pay Fine functionality" />
     <MESSAGE value="Pay Fine Success functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pay Fine Success functionality" />
+    <MESSAGE value="Pay Fine Success page touches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pay Fine Success page touches" />
   </component>
 </project>
