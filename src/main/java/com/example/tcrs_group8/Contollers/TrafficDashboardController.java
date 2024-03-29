@@ -15,7 +15,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TrafficDashboardController {
-    SceneController sceneController=new SceneController();
+    public TextField noOfSessions;
+    public TextField trainingType;
+    public TextField nameFeild;
+    public TextField Lnumber;
+    public TextField notes;
+    SceneController sceneController = new SceneController();
     public VBox rightSide;
     public VBox leftSide;
     @FXML
@@ -48,8 +53,41 @@ public class TrafficDashboardController {
     // Event handler for the Enroll Driver button click
     @FXML
     void onEnrollButtonClick(ActionEvent event) {
-        System.out.println("Enroll Driver button clicked");
-        // Add your logic here, such as opening an enrollment form dialog
+
+        if (!(noOfSessions.getText().isEmpty() && (trainingType.getText().isEmpty()))) {
+            try {
+
+                String sql = "UPDATE TrafficSchoolEnrollment SET EnrollmentStatus = ?, NumberOfSessions = ? ,TrainingType=? WHERE caseID = ?";
+                PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+                preparedStatement.setString(1, "Enrolled");
+                preparedStatement.setString(2, noOfSessions.getText());
+                preparedStatement.setString(3, trainingType.getText());
+                preparedStatement.setString(4, searchField.getText());
+                int rowsAffected = preparedStatement.executeUpdate();
+                Alert helpAlert;
+                if (rowsAffected > 0) {
+                    helpAlert = new Alert(Alert.AlertType.INFORMATION);
+                    helpAlert.setHeaderText("Done");
+                    helpAlert.setContentText("User Enrolled Successfully !");
+                } else {
+                    helpAlert = new Alert(Alert.AlertType.ERROR);
+                    helpAlert.setHeaderText("Error");
+                    helpAlert.setContentText("Error in updating queries ! Please check if the user details to see if the user has a order for Traffic school!");
+                }
+                helpAlert.showAndWait();
+            } catch (SQLException e) {
+                System.out.println(e);
+                Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+                helpAlert.setHeaderText("Error");
+                helpAlert.setContentText("Error in updating queries !");
+                helpAlert.showAndWait();
+            }
+        } else {
+            Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+            helpAlert.setHeaderText("Error");
+            helpAlert.setContentText("Please fill all the fields! ");
+            helpAlert.showAndWait();
+        }
     }
 
     // Event handler for the search functionality
@@ -61,50 +99,43 @@ public class TrafficDashboardController {
     }
 
     @FXML
-    void search(){
-        String sql = "SELECT * FROM Cases Where caseID=1234567890";
+    void search() {
+        String sql = "SELECT * FROM CaseUserResultDetails Where caseID=?";
         try {
             PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
-//            preparedStatement.setString(1,searchField.getText());
+            preparedStatement.setString(1, searchField.getText());
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-//                caseDate.setText(resultSet.getString("OffenceDate"));
-//                offenceNumber.setText(resultSet.getString("OffenceNumber"));
-//                officerName.setText(resultSet.getString("OfficerName"));
-//                officerNotes.setText(resultSet.getString("OfficerNotes"));
-//                pastOffence.setText(resultSet.getString("PastOffences"));
-//                sql = "SELECT * FROM UserDetails Where UserId = " + resultSet.getString("UserID");
-//                preparedStatement = DBConnector.getConnection().prepareStatement(sql);
-//                resultSet = preparedStatement.executeQuery();
-//                if(resultSet.next()){
-//                    licenseNumber.setText(resultSet.getString(4));
-//                    name.setText(resultSet.getString("Name"));
-//                }else{
-//                    System.out.println("Error");
-//                }
-
-            }else{
+                nameFeild.setText(resultSet.getString("UserName"));
+                Lnumber.setText(resultSet.getString("DriverLicenseNumber"));
+                notes.setText(resultSet.getString("Notes"));
+                enrollButton.setDisable(false);
+            } else {
                 Alert helpAlert = new Alert(Alert.AlertType.ERROR);
                 helpAlert.setHeaderText("Error");
                 helpAlert.setContentText("No results found for this case number!");
                 helpAlert.showAndWait();
             }
-        }catch (SQLException ex) {
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         }
     }
+
     // Initialize method (optional), called after the FXML fields are populated
     @FXML
     public void initialize() {
         // Initialization code here, such as configuring components
+        enrollButton.setDisable(true);
         System.out.println("Traffic Dashboard UI initialized");
     }
-@FXML
+
+    @FXML
     public void onHelpClicked(ActionEvent actionEvent) throws IOException {
         sceneController.switchToFaqPage(actionEvent);
         System.out.println("Help clicked");
     }
-@FXML
+
+    @FXML
     public void onLogutClick(ActionEvent actionEvent) throws IOException {
         sceneController.switchToSignInPage(actionEvent);
         System.out.println("Logut clicked");

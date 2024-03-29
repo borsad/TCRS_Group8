@@ -9,8 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Pay Fine Success page touches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/JudicialDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/JudicialDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/judicialDashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/judicialDashboard-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/TrafficDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/TrafficDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/trafficDashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/trafficDashboard-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +54,12 @@
     "Application.SignInUI.executor": "Run",
     "Application.SignUpUI.executor": "Run",
     "Application.SuccessPageUI.executor": "Run",
+    "Application.TrafficDashboardUI.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "geethmaka",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/AppData/Local/SceneBuilder/SceneBuilder.exe",
     "node.js.detected.package.eslint": "true",
@@ -77,7 +78,7 @@
       <recent name="C:\Users\admin\eclipse-workspace\TCRS_FreshCopy\TCRS_Group8\src\main\java\com\example\tcrs_group8" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
+  <component name="RunManager" selected="Application.TrafficDashboardUI">
     <configuration name="AdminDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.AdminDashboardUI" />
       <module name="TCRS_Group8" />
@@ -132,10 +133,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TrafficDashboardUI" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.AdminDashboardUI" />
         <item itemvalue="Application.UserDashboardUI" />
-        <item itemvalue="Application.TrafficDashboardUI" />
       </list>
     </recent_temporary>
   </component>
