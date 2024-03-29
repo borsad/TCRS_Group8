@@ -8,8 +8,8 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.JudicialDashboardController">
     <!-- Top Menu -->
     <HBox alignment="TOP_RIGHT" spacing="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-        <Button onAction="#onHelpClicked" fx:id="helpButton" text="Help" />
-        <Button onAction="#onLogutClick" fx:id="logoutButton" text="Logout" />
+        <Button fx:id="helpButton" onAction="#onHelpClicked" text="Help" />
+        <Button fx:id="logoutButton" onAction="#onLogutClick" text="Logout" />
     </HBox>
 
     <!-- Left Side -->
