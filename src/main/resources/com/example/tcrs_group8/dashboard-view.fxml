@@ -16,7 +16,6 @@
     </Label>
         <GridPane alignment="CENTER" hgap="10" layoutX="137.0" layoutY="109.0" prefHeight="266.0" prefWidth="552.0" vgap="10">
             <Button minHeight="70" minWidth="150" onAction="#clickUserManagement" prefHeight="70.0" prefWidth="172.0" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-size: 16;" text="User Management" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <Button minHeight="70" minWidth="150" onAction="#clickFineManagement" prefHeight="70.0" prefWidth="221.0" style="-fx-background-color: #0000FF; -fx-text-fill: white; -fx-font-size: 16;" text="Fine Payment Management" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <columnConstraints>
          <ColumnConstraints />
          <ColumnConstraints />

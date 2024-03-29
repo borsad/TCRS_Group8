@@ -63,10 +63,7 @@ public class DashboardViewController {
         sceneController.switchToUserManagement(actionEvent);
 
     }
-    @FXML
-    public void clickFineManagement(ActionEvent actionEvent) {
 
-    }
     @FXML
     public void onLogutClick(ActionEvent actionEvent) throws IOException {
         sceneController.switchToSignInPage(actionEvent);
