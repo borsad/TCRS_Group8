@@ -40,7 +40,7 @@
                <HBox spacing="5.0" />
                <HBox spacing="5.0" />
                <HBox prefHeight="22.0" prefWidth="201.0" spacing="5.0">
-                     <TextField fx:id="nameField11" prefHeight="25.0" prefWidth="164.0" promptText="Violation Number: " />
+                     <TextField fx:id="nameField11" prefHeight="25.0" prefWidth="164.0" promptText="Case  Number:" />
                </HBox>
                <HBox spacing="5.0" />
 
