@@ -24,7 +24,6 @@
             <RowConstraints />
         </rowConstraints>
     </GridPane>
-    <Button layoutX="667.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" text="Help" />
-    <Button layoutX="724.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" text="Logout" />
+    <Button onAction="#logout" layoutX="724.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" text="Logout" />
 
 </AnchorPane>

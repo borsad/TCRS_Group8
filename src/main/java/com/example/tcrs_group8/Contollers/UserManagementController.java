@@ -11,18 +11,10 @@ public class UserManagementController {
     public UserManagementController() {
     }
 
-    // Method for handling the 'Help' button action
-    @FXML
-    private void handleHelpAction() {
-        // Your logic for the 'Help' action
-        System.out.println("Help button clicked");
-    }
 
-    // Method for handling the 'Logout' button action
-    @FXML
-    private void handleLogoutAction() {
-        // Your logic for the 'Logout' action
-        System.out.println("Logout button clicked");
+    public void logout(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
+
     }
 
     public void clickChangeUserName(ActionEvent actionEvent) throws IOException {
