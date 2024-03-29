@@ -7,10 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Pay Fine Success page touches">
+    <list default="true" id="95f8a371-dff7-40ca-9ef6-19c1a752ffc2" name="Changes" comment="Traffic school minor fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/JudicialDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/JudicialDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/judicialDashboard-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tcrs_group8/judicialDashboard-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/TrafficDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tcrs_group8/Contollers/TrafficDashboardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +53,12 @@
     "Application.SignInUI.executor": "Run",
     "Application.SignUpUI.executor": "Run",
     "Application.SuccessPageUI.executor": "Run",
+    "Application.TrafficDashboardUI.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "geethmaka",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/AppData/Local/SceneBuilder/SceneBuilder.exe",
     "node.js.detected.package.eslint": "true",
@@ -77,7 +77,7 @@
       <recent name="C:\Users\admin\eclipse-workspace\TCRS_FreshCopy\TCRS_Group8\src\main\java\com\example\tcrs_group8" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
+  <component name="RunManager" selected="Application.TrafficDashboardUI">
     <configuration name="AdminDashboardUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tcrs_group8.AdminDashboardUI" />
       <module name="TCRS_Group8" />
@@ -132,10 +132,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TrafficDashboardUI" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.AdminDashboardUI" />
         <item itemvalue="Application.UserDashboardUI" />
-        <item itemvalue="Application.TrafficDashboardUI" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +292,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711691106021</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Traffic school dashboard done">
+      <option name="closed" value="true" />
+      <created>1711753960378</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1711753960378</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Traffic school touch ups">
+      <option name="closed" value="true" />
+      <created>1711754417723</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1711754417723</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Traffic school minor fixes">
+      <option name="closed" value="true" />
+      <created>1711755177775</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1711755177775</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +355,9 @@
     <MESSAGE value="Pay Fine functionality" />
     <MESSAGE value="Pay Fine Success functionality" />
     <MESSAGE value="Pay Fine Success page touches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pay Fine Success page touches" />
+    <MESSAGE value="Traffic school dashboard done" />
+    <MESSAGE value="Traffic school touch ups" />
+    <MESSAGE value="Traffic school minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Traffic school minor fixes" />
   </component>
 </project>
