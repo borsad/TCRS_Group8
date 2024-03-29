@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.PayFineClientController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.PayFineClientController">
     <HBox alignment="TOP_RIGHT" spacing="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <Button layoutX="21.0" layoutY="5.0" mnemonicParsing="false" onAction="#clickBackButton" text="Back to Dashboard" />
         <Button fx:id="helpButton" onAction="#onHelpClicked" text="Help" />
@@ -40,7 +36,7 @@
                <HBox spacing="5.0" />
                <HBox spacing="5.0" />
                <HBox prefHeight="22.0" prefWidth="201.0" spacing="5.0">
-                     <TextField fx:id="nameField11" prefHeight="25.0" prefWidth="164.0" text="Violation Number: " />
+                     <TextField fx:id="nameField11" prefHeight="25.0" prefWidth="164.0" promptText="Violation Number: " />
                </HBox>
                <HBox spacing="5.0" />
 

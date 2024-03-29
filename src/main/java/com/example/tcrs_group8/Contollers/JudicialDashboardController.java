@@ -80,10 +80,10 @@ public class JudicialDashboardController {
     }
     @FXML
     void handleSearchButtonAction(ActionEvent event) {
-        String sql = "SELECT * FROM Cases Where caseID=1234567890";
+        String sql = "SELECT * FROM Cases Where caseID=?";
         try {
             PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
-//            preparedStatement.setString(1,searchField.getText());
+            preparedStatement.setString(1,searchField.getText());
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 caseDate.setText(resultSet.getString("OffenceDate"));
@@ -98,7 +98,7 @@ public class JudicialDashboardController {
                     licenseNumber.setText(resultSet.getString(4));
                     name.setText(resultSet.getString("Name"));
                 }else{
-                    System.out.println("ddd");
+                    System.out.println("Error");
                 }
 
             }else{
@@ -109,7 +109,17 @@ public class JudicialDashboardController {
             }
         }catch (SQLException ex) {
                     System.err.println(ex.getMessage());
+            Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+            helpAlert.setHeaderText("Error");
+            helpAlert.setContentText("Database Error Occurred! Please contact sysadmin");
+            helpAlert.showAndWait();
                 }
+        catch (RuntimeException e){
+            Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+            helpAlert.setHeaderText("Error");
+            helpAlert.setContentText("Database Error Occurred! Please contact sysadmin");
+            helpAlert.showAndWait();
+        }
     }
 
     @FXML

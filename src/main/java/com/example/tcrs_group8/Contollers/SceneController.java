@@ -93,4 +93,12 @@ private Parent root;
         stage.show();
     }
 
+
+    public void switchToPayFine(ActionEvent actionEvent) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("payFineClientSide-view.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
