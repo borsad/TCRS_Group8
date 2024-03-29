@@ -17,11 +17,11 @@
         <TextField fx:id="searchField" prefHeight="0.0" prefWidth="149.0" promptText="Search by Case #" text="1234567890" />
         <Button fx:id="searchButton" onAction="#handleSearchButtonAction" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
 
-        <TextField fx:id="fineField" prefHeight="0.0" prefWidth="149.0" promptText="Enter Fine Amount" />
+        <TextField fx:id="fineField" prefHeight="0.0" prefWidth="149.0" promptText="Enter Fine Amount" visible="false" />
 
-        <Button fx:id="fineButton" onAction="#addFine" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Fine Driver" />
-      <Button fx:id="assignButton" onAction="#assignTrafficSchool" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Assign Training" />
-      <Button fx:id="dismissButton" onAction="#dismissCase" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Dismiss Charge" />
+        <Button visible="false" fx:id="fineButton" onAction="#addFine" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Fine Driver" />
+      <Button visible="false" fx:id="assignButton" onAction="#assignTrafficSchool" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Assign Training" />
+      <Button visible="false" fx:id="dismissButton" onAction="#dismissCase" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Dismiss Charge" />
 
 
     </VBox>

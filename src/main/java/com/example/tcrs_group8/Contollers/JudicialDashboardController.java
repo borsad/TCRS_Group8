@@ -87,13 +87,17 @@ public class JudicialDashboardController {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 caseDate.setText(resultSet.getString("OffenceDate"));
-                offenceNumber.setText(resultSet.getString("OffenceNumber"));
+                offenceNumber.setText(resultSet.getString("OffenseNumber"));
                 officerName.setText(resultSet.getString("OfficerName"));
                 officerNotes.setText(resultSet.getString("OfficerNotes"));
-                pastOffence.setText(resultSet.getString("PastOffences"));
+                pastOffence.setText(resultSet.getString("PastOffenses"));
                 sql = "SELECT * FROM UserDetails Where UserId = " + resultSet.getString("UserID");
                 preparedStatement = DBConnector.getConnection().prepareStatement(sql);
                 resultSet = preparedStatement.executeQuery();
+                fineField.setVisible(true);
+                fineButton.setVisible(true);
+                assignButton.setVisible(true);
+                dismissButton.setVisible(true);
                 if(resultSet.next()){
                     licenseNumber.setText(resultSet.getString(4));
                     name.setText(resultSet.getString("Name"));
