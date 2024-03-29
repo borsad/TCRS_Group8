@@ -22,6 +22,8 @@ public class SuccessPageController {
     private void handleBackAction(ActionEvent actionEvent) throws IOException {
         sceneController.switchToPayFine(actionEvent);
     }
+
+
     public void initialize() {
         // Update UI with shared data
         if (sharedData != null) {
@@ -30,4 +32,8 @@ public class SuccessPageController {
         }
     }
 
+    public void logout(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
+
+    }
 }

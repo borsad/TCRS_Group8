@@ -132,7 +132,6 @@ public class PayFineClientController {
     @FXML
     public void onLogutClick(ActionEvent actionEvent) throws IOException {
         sceneController.switchToSignInPage(actionEvent);
-        System.out.println("Help clicked");
     }
     @FXML
     public void initialize() {
