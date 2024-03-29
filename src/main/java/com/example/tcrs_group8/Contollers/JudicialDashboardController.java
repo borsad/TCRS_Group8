@@ -171,7 +171,38 @@ public class JudicialDashboardController {
     }
     @FXML
     public void dismissCase() {
-        
+        String sql= "Insert into CaseResults(CaseID,ResultType) values(?,'Case Dismissed')";
+        try{PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1,searchField.getText());
+            int affectedRows = preparedStatement.executeUpdate();
+            if (affectedRows == 0) {
+                Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+                helpAlert.setHeaderText("Can't Update");
+                helpAlert.setContentText("Can't Update");
+                helpAlert.showAndWait();
+                throw new SQLException("Creating user failed, no rows affected.");
+            }else{
+                Alert helpAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                helpAlert.setHeaderText("Records Updated");
+                helpAlert.setContentText("Records Updated");
+                helpAlert.showAndWait();
+                fineField.setVisible(false);
+                dismissButton.setVisible(false);
+                assignButton.setVisible(false);
+                fineButton.setVisible(false);
+                searchField.setText("");
+                name.setText("");
+                licenseNumber.setText("");
+                pastOffence.setText("");
+                officerNotes.setText("");
+                offenceNumber.setText("");
+                caseDate.setText("");
+                officerName.setText("");
+
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
     @FXML
     public void initialize() {
