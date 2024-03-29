@@ -1,11 +1,16 @@
 package com.example.tcrs_group8.Contollers;
 
+import com.example.tcrs_group8.Services.DBConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class PayFineClientController {
     SceneController sceneController = new SceneController();
@@ -38,9 +43,25 @@ public class PayFineClientController {
     // This method will be called when the "Search" button is clicked
     @FXML
     private void handleSearch() {
-        // Implement your logic here
-        System.out.println("Search button clicked");
-        System.out.println("Violation Number: " + nameField11.getText());
+        String sql = "SELECT * FROM FineDetails Where OffenseNumber=?";
+        try {
+            PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1,nameField11.getText());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                nameField.setText(resultSet.getString("Name"));
+                violationField.setText(resultSet.getString("OfficerNotes"));
+                licenseNumberField.setText(resultSet.getString("DriverLicenseNumber"));
+                amountField.setText(resultSet.getString("Fine"));
+            }else{
+                Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+                helpAlert.setHeaderText("Error");
+                helpAlert.setContentText("No results found for this violation number!");
+                helpAlert.showAndWait();
+            }
+        }catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
     }
     @FXML
     public void clickBackButton(ActionEvent actionEvent) throws IOException {
