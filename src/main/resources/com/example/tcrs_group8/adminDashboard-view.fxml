@@ -45,6 +45,6 @@
         </columns>
     </TableView>
     <TextField layoutX="240.0" layoutY="22.0" maxWidth="200.0" promptText="Search" />
-    <Button layoutX="667.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" text="Help" />
-    <Button layoutX="724.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" text="Logout" />
+    <Button layoutX="667.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" onAction="#onHelpClicked" text="Help" />
+    <Button layoutX="724.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" onAction="#onLogutClick" text="Logout" />
 </AnchorPane>

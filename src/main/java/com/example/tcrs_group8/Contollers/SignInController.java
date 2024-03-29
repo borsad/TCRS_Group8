@@ -159,6 +159,8 @@ public class SignInController {
                sceneController.switchToAdminDashboard(actionEvent);
        }
        //add redirection logic based on roles here
+   }else {
+       setLblError(Color.TOMATO, "Failed to sign in");
    }
 
     }

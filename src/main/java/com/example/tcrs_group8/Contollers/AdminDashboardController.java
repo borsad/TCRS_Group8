@@ -1,10 +1,13 @@
 package com.example.tcrs_group8.Contollers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
-public class AdminDashboardController {
+import java.io.IOException;
 
+public class AdminDashboardController {
+    SceneController sceneController=new SceneController();
     @FXML
     private TableView<?> tableView;
 
@@ -34,7 +37,14 @@ public class AdminDashboardController {
     }
 
     @FXML
-    private void onLogoutClicked() {
+    private void onHelpClicked(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToFaqPage(actionEvent);
+        System.out.println("Help clicked");
+    }
+
+    @FXML
+    private void onLogutClick(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
         System.out.println("Logout clicked");
     }
 }

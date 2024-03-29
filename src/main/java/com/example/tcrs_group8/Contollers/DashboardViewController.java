@@ -52,6 +52,6 @@ public class DashboardViewController {
     @FXML
     private void handleLogoutAction() {
         System.out.println("Logout button clicked");
-        // Add your logout logic here
+
     }
 }
