@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class JudicialDashboardController {
+    String userId=null;
     SceneController sceneController= new SceneController();
     public Button searchButton;
     @FXML
@@ -48,36 +49,6 @@ public class JudicialDashboardController {
     @FXML private TextField fineField;
     Utils u = new Utils();
     String values;
-
-    @FXML
-    void handleFineButtonAction(ActionEvent event) {
-        System.out.println("Fine the Driver button clicked");
-        // Implement your logic here
-    }
-
-    @FXML
-    void handleAssignButtonAction(ActionEvent event) {
-        System.out.println("Assign Training button clicked");
-        // Implement your logic here
-    }
-
-    @FXML
-    void handleDismissButtonAction(ActionEvent event) {
-        System.out.println("Dismiss Charge button clicked");
-        // Implement your logic here
-    }
-
-    @FXML
-    void handleHelpButtonAction(ActionEvent event) {
-        System.out.println("Help button clicked");
-        // Implement your logic here
-    }
-
-    @FXML
-    void handleLogoutButtonAction(ActionEvent event) {
-        System.out.println("Logout button clicked");
-        // Implement your logic here
-    }
     @FXML
     void handleSearchButtonAction(ActionEvent event) {
         String sql = "SELECT * FROM Cases Where caseID=?";
@@ -91,6 +62,7 @@ public class JudicialDashboardController {
                 officerName.setText(resultSet.getString("OfficerName"));
                 officerNotes.setText(resultSet.getString("OfficerNotes"));
                 pastOffence.setText(resultSet.getString("PastOffenses"));
+                userId=resultSet.getString("UserID");
                 sql = "SELECT * FROM UserDetails Where UserId = " + resultSet.getString("UserID");
                 preparedStatement = DBConnector.getConnection().prepareStatement(sql);
                 resultSet = preparedStatement.executeQuery();
@@ -131,8 +103,27 @@ public class JudicialDashboardController {
         values = "null,"+searchField.getText()+",'Fine',"+fineField.getText();
         int k=u.insert("CaseResults",values);
         if(k>0){
+            Alert helpAlert = new Alert(Alert.AlertType.CONFIRMATION);
+            helpAlert.setHeaderText("Records Updated");
+            helpAlert.setContentText("Records Updated");
+            helpAlert.showAndWait();
+            fineField.setVisible(false);
+            dismissButton.setVisible(false);
+            assignButton.setVisible(false);
+            fineButton.setVisible(false);
+            searchField.setText("");
+            name.setText("");
+            licenseNumber.setText("");
+            pastOffence.setText("");
+            officerNotes.setText("");
+            offenceNumber.setText("");
+            caseDate.setText("");
+            officerName.setText("");
             System.out.println("done");
-        }else{
+        }else{ Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+            helpAlert.setHeaderText("Can't Update");
+            helpAlert.setContentText("Can't Update");
+            helpAlert.showAndWait();
             System.out.println("F");
         }
 
