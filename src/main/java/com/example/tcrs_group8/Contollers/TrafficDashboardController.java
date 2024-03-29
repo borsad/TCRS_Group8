@@ -66,8 +66,9 @@ public class TrafficDashboardController {
                 int rowsAffected = preparedStatement.executeUpdate();
                 Alert helpAlert;
                 if (rowsAffected > 0) {
-                    helpAlert = new Alert(Alert.AlertType.INFORMATION);
-                    helpAlert.setHeaderText("Done");
+                    helpAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                    helpAlert.setTitle("Confirmation");
+                    helpAlert.setHeaderText("Successfully updated the Record");
                     helpAlert.setContentText("User Enrolled Successfully !");
                     enrollButton.setDisable(true);
                     nameFeild.setText("");
@@ -107,6 +108,8 @@ public class TrafficDashboardController {
 
     @FXML
     void search() {
+        noOfSessions.setText("");
+        trainingType.setText("");
         String sql = "SELECT * FROM CaseUserResultDetails Where caseID=?";
         try {
             PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
@@ -122,9 +125,13 @@ public class TrafficDashboardController {
                 preparedStatement.setString(1, searchField.getText());
                 resultSet = preparedStatement.executeQuery();
                 if (resultSet.next()) {
-                    noOfSessions.setText(resultSet.getString("NumberOfSessions"));
-                    trainingType.setText(resultSet.getString("TrainingType"));
-                    enrollButton.setText("Update Enrolment");
+                    if(!(resultSet.getString("NumberOfSessions") == null)){
+                        noOfSessions.setText(resultSet.getString("NumberOfSessions"));
+                        trainingType.setText(resultSet.getString("TrainingType"));
+                        enrollButton.setText("Update Enrolment");
+                    }else{
+                        enrollButton.setText("Enroll Driver");
+                    }
                 }
             } else {
                 Alert helpAlert = new Alert(Alert.AlertType.ERROR);
