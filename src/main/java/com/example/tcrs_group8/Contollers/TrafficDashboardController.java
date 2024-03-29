@@ -1,12 +1,18 @@
 package com.example.tcrs_group8.Contollers;
 
+import com.example.tcrs_group8.Services.DBConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class TrafficDashboardController {
     SceneController sceneController=new SceneController();
@@ -15,6 +21,7 @@ public class TrafficDashboardController {
     @FXML
     private Button helpButton;
 
+    public Button searchButton;
     @FXML
     private Button logoutButton;
 
@@ -53,6 +60,39 @@ public class TrafficDashboardController {
         // Implement your search logic here
     }
 
+    @FXML
+    void search(){
+        String sql = "SELECT * FROM Cases Where caseID=1234567890";
+        try {
+            PreparedStatement preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+//            preparedStatement.setString(1,searchField.getText());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+//                caseDate.setText(resultSet.getString("OffenceDate"));
+//                offenceNumber.setText(resultSet.getString("OffenceNumber"));
+//                officerName.setText(resultSet.getString("OfficerName"));
+//                officerNotes.setText(resultSet.getString("OfficerNotes"));
+//                pastOffence.setText(resultSet.getString("PastOffences"));
+//                sql = "SELECT * FROM UserDetails Where UserId = " + resultSet.getString("UserID");
+//                preparedStatement = DBConnector.getConnection().prepareStatement(sql);
+//                resultSet = preparedStatement.executeQuery();
+//                if(resultSet.next()){
+//                    licenseNumber.setText(resultSet.getString(4));
+//                    name.setText(resultSet.getString("Name"));
+//                }else{
+//                    System.out.println("Error");
+//                }
+
+            }else{
+                Alert helpAlert = new Alert(Alert.AlertType.ERROR);
+                helpAlert.setHeaderText("Error");
+                helpAlert.setContentText("No results found for this case number!");
+                helpAlert.showAndWait();
+            }
+        }catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+    }
     // Initialize method (optional), called after the FXML fields are populated
     @FXML
     public void initialize() {

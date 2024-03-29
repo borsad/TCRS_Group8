@@ -23,6 +23,8 @@
     <!-- Left Side -->
     <VBox fx:id="leftSide" layoutX="14.0" layoutY="45.0" prefHeight="535.0" prefWidth="149.0" spacing="10.0" style="-fx-background-color: #EFEFEF;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="45.0">
         <TextField fx:id="searchField" prefHeight="19.0" prefWidth="149.0" promptText="Search by License #" />
+        <Button fx:id="searchButton" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Search" />
+        <Button fx:id="enrollButton" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Enroll Driver" />
         <Button fx:id="enrollButton" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Enroll Driver" />
     </VBox>
 
