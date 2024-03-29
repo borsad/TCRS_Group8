@@ -6,24 +6,39 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tcrs_group8.Contollers.OfficerDashboardController">
-    <!-- VBox for Top Menu (Help, Logout, and Search) -->
-    <VBox layoutX="600.0" layoutY="10.0" />
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.DatePicker?>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Top Menu (Help, Logout, and Search) -->
+    <HBox prefHeight="40.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Help" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Logout" />
+        </children>
+        <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+        </padding>
+    </HBox>
 
-    <!-- VBox for Side Panel (Input Fields and Buttons) -->
-    <VBox layoutX="10.0" layoutY="63.0" prefHeight="527.0" prefWidth="230.0" spacing="10.0" style="-fx-background-color: white;">
+    <!-- Side Panel (Input Fields and Buttons) -->
+    <VBox prefHeight="527.0" prefWidth="230.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0" style="-fx-background-color: #EFEFEF;">
         <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
         </padding>
-        <TextField maxWidth="200.0" prefHeight="5.0" prefWidth="127.0" promptText="Report ID" />
-        <TextField maxWidth="200.0" promptText="Vehicle Number" />
-        <TextField maxWidth="200.0" prefHeight="25.0" prefWidth="140.0" promptText="Driving License Number" />
-        <TextField maxWidth="200.0" prefHeight="25.0" prefWidth="156.0" promptText="Fine Amount" />
+        <TextField fx:id="caseIDField" prefHeight="25.0" promptText="Case ID" />
+        <TextField fx:id="userIDField" prefHeight="25.0" promptText="User ID" />
+        <TextField fx:id="officerNameField" prefHeight="25.0" promptText="Officer Name" />
+        <TextArea fx:id="officerNotesArea" prefHeight="60.0" promptText="Officer Notes" />
+        <DatePicker fx:id="offenceDatePicker" prefHeight="25.0" promptText="Offence Date" />
+        <TextField fx:id="offenceNumberField" prefHeight="25.0" promptText="Offence Number" />
+        <TextField fx:id="pastOffencesField" prefHeight="25.0" promptText="Past Offences" />
         <GridPane>
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="60.0" />
@@ -34,24 +49,22 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Add" />
-                <Button prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Delete" GridPane.columnIndex="1" />
-                <Button prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Update" GridPane.rowIndex="1" />
-                <Button prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Generate Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="retrieveButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Retrieve Data" />
+                <Button fx:id="updateButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Update" GridPane.columnIndex="1" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Delete" GridPane.rowIndex="1" />
+                <Button fx:id="reportButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Generate Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             </children>
         </GridPane>
     </VBox>
 
     <!-- TableView for Displaying Data -->
-    <TableView layoutX="247.0" layoutY="63.0" prefHeight="527.0" prefWidth="549.0">
+    <TableView prefHeight="527.0" prefWidth="760.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
         <columns>
             <TableColumn prefWidth="140.0" text="Report ID" />
-            <TableColumn prefWidth="145.0" text="Violation" />
-            <TableColumn prefWidth="135.0" text="Driving License Number" />
+            <TableColumn prefWidth="140.0" text="Violations" />
+            <TableColumn prefWidth="140.0" text="Driving License Number" />
             <TableColumn prefWidth="140.0" text="Officer ID" />
         </columns>
     </TableView>
-    <TextField layoutX="240.0" layoutY="22.0" maxWidth="200.0" promptText="Search" />
-    <Button layoutX="667.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" text="Help" />
-    <Button layoutX="724.0" layoutY="22.0" maxHeight="25.0" maxWidth="70.0" text="Logout" />
+    <TextField fx:id="searchField" layoutX="250.0" layoutY="10.0" maxWidth="200.0" prefHeight="25.0" promptText="Search" />
 </AnchorPane>

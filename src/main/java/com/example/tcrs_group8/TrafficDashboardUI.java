@@ -1,7 +1,7 @@
 /**COMMENT !
  Author: Group 8
  Name: Asem AL Dwaikat ID: 239386640
- Name:
+ Name:Sonal Koggala Liyanage ID:249601680
  Name:
  Name:
  COSC 3506 Section A
@@ -10,18 +10,29 @@
 
 package com.example.tcrs_group8;
 
+import com.example.tcrs_group8.Services.Utils;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import javax.swing.text.html.ImageView;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class TrafficDashboardUI extends Application {
+
+    // Declare class-level fields for form fields
+    private TextField caseIDField;
+    private TextField userIDField;
+    private TextField officerNameField;
+    private TextArea officerNotesArea;
+    private DatePicker offenceDatePicker;
+    private TextField offenceNumberField;
+    private TextField pastOffencesField;
 
     @Override
     public void start(Stage stage) {
@@ -35,26 +46,26 @@ public class TrafficDashboardUI extends Application {
         menuContainer.setPadding(new Insets(10));
         menuContainer.getChildren().addAll(helpButton, logoutLink);
 
-        // Form fields
-        TextField caseIDField = new TextField();
+        // Initialize form fields
+        caseIDField = new TextField();
         caseIDField.setPromptText("Case ID");
 
-        TextField userIDField = new TextField();
+        userIDField = new TextField();
         userIDField.setPromptText("User ID");
 
-        TextField officerNameField = new TextField();
+        officerNameField = new TextField();
         officerNameField.setPromptText("Officer Name");
 
-        TextArea officerNotesArea = new TextArea();
+        officerNotesArea = new TextArea();
         officerNotesArea.setPromptText("Officer Notes");
 
-        DatePicker offenceDatePicker = new DatePicker();
+        offenceDatePicker = new DatePicker();
         offenceDatePicker.setPromptText("Offence Date");
 
-        TextField offenceNumberField = new TextField();
+        offenceNumberField = new TextField();
         offenceNumberField.setPromptText("Offence Number");
 
-        TextField pastOffencesField = new TextField();
+        pastOffencesField = new TextField();
         pastOffencesField.setPromptText("Past Offences");
 
         // Submit button
@@ -95,8 +106,50 @@ public class TrafficDashboardUI extends Application {
 
     // Method to handle form submission
     private void submitForm() {
-        // Handle form submission logic here
-        System.out.println("Form submitted!");
+        // Get the values from the form fields
+        String caseID = caseIDField.getText();
+        String uniqueCode = userIDField.getText(); // Assuming user enters UniqueCode in the userIDField
+        String officerName = officerNameField.getText();
+        String officerNotes = officerNotesArea.getText();
+        String offenceDate = offenceDatePicker.getValue().toString();
+        String offenceNumber = offenceNumberField.getText();
+        String pastOffences = pastOffencesField.getText();
+
+        // Retrieve UserID from UserDetails table based on UniqueCode
+        int userID = getUserIDFromUserDetails(uniqueCode);
+
+        if (userID != -1) {
+            // Insert the values into the Cases table
+            Utils utils = new Utils();
+            String values = "'" + caseID + "', '" + userID + "', '" + officerName + "', '" + officerNotes + "', '" +
+                    offenceDate + "', '" + offenceNumber + "', '" + pastOffences + "'";
+            int rowsInserted = utils.insert("Cases", values);
+
+            if (rowsInserted > 0) {
+                System.out.println("User details inserted successfully!");
+            } else {
+                System.out.println("Failed to insert user details!");
+            }
+        } else {
+            System.out.println("User not found in UserDetails table.");
+        }
+    }
+
+    // Method to retrieve UserID from UserDetails table based on UniqueCode
+    private int getUserIDFromUserDetails(String uniqueCode) {
+        try {
+            Utils utils = new Utils();
+            ResultSet resultSet = utils.getData("UserDetails");
+
+            while (resultSet.next()) {
+                if (resultSet.getString("UniqueCode").equals(uniqueCode)) {
+                    return resultSet.getInt("UserId");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1; // Return -1 if UserID is not found
     }
 
     public static void main(String[] args) {
