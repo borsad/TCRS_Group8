@@ -101,4 +101,11 @@ private Parent root;
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToFineSuccess(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("successPage-view.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

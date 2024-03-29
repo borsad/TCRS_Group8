@@ -14,19 +14,23 @@
         <VBox spacing="5.0">
             <HBox spacing="5.0">
                 <Label text="Name:" HBox.hgrow="NEVER" />
-                <TextField fx:id="nameField" text="Jason Andrew" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="nameField" editable="false" HBox.hgrow="ALWAYS" />
             </HBox>
             <HBox spacing="5.0">
                 <Label text="Violation:" HBox.hgrow="NEVER" />
-                <TextField fx:id="violationField" text="ABC 1234" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="violationField" editable="false" HBox.hgrow="ALWAYS" />
             </HBox>
             <HBox spacing="5.0">
                 <Label text="Driving License Number:" HBox.hgrow="NEVER" />
-                <TextField fx:id="licenseNumberField" text="123456789" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="licenseNumberField" editable="false" HBox.hgrow="ALWAYS" />
             </HBox>
             <HBox spacing="5.0">
-                <Label text="Amount:" HBox.hgrow="NEVER" />
-                <TextField fx:id="amountField" text="1000CAD" HBox.hgrow="ALWAYS" />
+                <Label text="Amount (CAD):" HBox.hgrow="NEVER" />
+                <TextField fx:id="amountField" editable="false" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="5.0">
+                <Label text="Payment Status:" HBox.hgrow="NEVER" />
+                <TextField fx:id="paymentStatus" editable="false" HBox.hgrow="ALWAYS" />
             </HBox>
         </VBox>
         <Button fx:id="payFineButton" maxWidth="1.7976931348623157E308" onAction="#handlePayFine" prefWidth="560.0" style="-fx-background-color: #0000FF; -fx-text-fill: white;" text="Pay The Fine" />
