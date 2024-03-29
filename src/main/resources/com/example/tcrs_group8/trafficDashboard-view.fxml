@@ -31,11 +31,11 @@
          </opaqueInsets></Label>
         <GridPane alignment="CENTER" hgap="10" prefHeight="88.0" prefWidth="612.0" vgap="5">
             <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <TextField fx:id="nameFeild" text="ABC" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="nameFeild" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
             <Label text="License Number:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <TextField fx:id="Lnumber" text="4214fs6353317676137" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Lnumber" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Violation Details" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <TextField fx:id="notes" text="430, 421" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="notes" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          <columnConstraints>
             <ColumnConstraints />
             <ColumnConstraints />
