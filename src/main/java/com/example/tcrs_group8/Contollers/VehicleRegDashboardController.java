@@ -1,11 +1,15 @@
 package com.example.tcrs_group8.Contollers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 
 public class VehicleRegDashboardController {
+    SceneController sceneController=new SceneController();
     @FXML
     private Button helpButton;
 
@@ -79,5 +83,22 @@ public class VehicleRegDashboardController {
         // Initialization logic here
         System.out.println("Traffic Dashboard Controller Initialized");
     }
+
+    @FXML
+    public void onHelpClicked(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToFaqPage(actionEvent);
+        System.out.println("Help clicked");
+    }
+    @FXML
+    public void onLogutClick(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
+        System.out.println("Logout clicked");
+    }
+    @FXML
+    public void clickBackButton(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToUserDashboard(actionEvent);
+        System.out.println("clicked on back button");
+    }
+
 }
 

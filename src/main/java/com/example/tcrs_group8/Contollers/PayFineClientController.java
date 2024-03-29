@@ -1,11 +1,14 @@
 package com.example.tcrs_group8.Contollers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
-public class PayFineClientController {
+import java.io.IOException;
 
+public class PayFineClientController {
+    SceneController sceneController = new SceneController();
     @FXML
     private TextField nameField;
 
@@ -39,4 +42,20 @@ public class PayFineClientController {
         System.out.println("Search button clicked");
         System.out.println("Violation Number: " + nameField11.getText());
     }
+    @FXML
+    public void clickBackButton(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToUserDashboard(actionEvent);
+        System.out.println("clicked on back button");
+    }
+    @FXML
+    public void onHelpClicked(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToFaqPage(actionEvent);
+        System.out.println("Help clicked");
+    }
+    @FXML
+    public void onLogutClick(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
+        System.out.println("Help clicked");
+    }
+
 }

@@ -1,10 +1,13 @@
 package com.example.tcrs_group8.Contollers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
-public class UserDashboardController {
+import java.io.IOException;
 
+public class UserDashboardController {
+    SceneController sceneController=new SceneController();
     @FXML
     private TableView<?> tableView;
 
@@ -29,12 +32,23 @@ public class UserDashboardController {
     }
 
     @FXML
-    private void onHelpClicked() {
+    private void onHelpClicked(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToFaqPage(actionEvent);
         System.out.println("Help clicked");
     }
 
     @FXML
-    private void onLogoutClicked() {
+    private void onLogutClick(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToSignInPage(actionEvent);
         System.out.println("Logout clicked");
+    }
+    @FXML
+    public void clickMakeAPayment(ActionEvent actionEvent) throws IOException {
+        sceneController.switchToMakeAPayment(actionEvent);
+        System.out.println("Clicked on Make a Payment");
+    }
+    @FXML
+    public void clickVehicleRegistration(ActionEvent actionEvent) throws IOException {
+    sceneController.switchToVehicleRegistration(actionEvent);
     }
 }
