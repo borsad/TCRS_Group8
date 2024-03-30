@@ -190,7 +190,18 @@ public class VehicleRegDashboardController {
                     statement.setString(2, userId);
                     int rowsAffected = statement.executeUpdate();
                     if (rowsAffected > 0) {
+                        Alert  helpAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                        helpAlert.setTitle("Confirmation");
+                        helpAlert.setHeaderText("Successfully updated the Record");
+                        helpAlert.setContentText("Vehicle Registered");
+                        helpAlert.showAndWait();
                         System.out.println("Record inserted successfully into LoginCredentials.");
+                        vinNumberField.setText("");
+                        licenseField.setText("");
+                        nameField.setText("");
+                        makeResult.setText("");
+                        modelResult.setText("");
+                        searchField.setText("");
                     }
                     else {
                         Alert helpAlert = new Alert(Alert.AlertType.ERROR);

@@ -124,6 +124,12 @@
             <version>21.0.1</version>
             <scope>compile</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.2</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/eu.hansolo/toolboxfx -->
         <dependency>
             <groupId>eu.hansolo</groupId>
@@ -166,7 +172,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.tcrs_group8/com.example.tcrs_group8.HelloApplication</mainClass>
+                            <mainClass>src/main/java/com/example/tcrs_group8/HelloApplication.java</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
